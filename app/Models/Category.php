@@ -28,8 +28,9 @@ class Category extends Model
         return $this->children()->with('descendants');
     }
 
-    public function vendors(){
-
-        return $this->belongsToMany(Vendor::class);
+    public function vendors()
+    {
+        return $this->belongsToMany(Vendor::class, 'vendor_categories');
     }
+
 }

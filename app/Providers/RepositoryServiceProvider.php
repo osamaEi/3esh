@@ -2,9 +2,13 @@
 
 namespace App\Providers;
 
-use App\Repositories\CategoryRepository;
-use App\Repositories\Contracts\CategoryRepositoryInterface;
+use App\Repositories\BranchRepository;
+use App\Repositories\VendorRepository;
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\CategoryRepository;
+use App\Repositories\Contracts\BranchRepositoryInterface;
+use App\Repositories\Contracts\VendorRepositoryInterface;
+use App\Repositories\Contracts\CategoryRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -19,7 +23,14 @@ class RepositoryServiceProvider extends ServiceProvider
             CategoryRepositoryInterface::class,
             CategoryRepository::class
         );
-        
+        $this->app->bind(
+           VendorRepositoryInterface::class,
+            VendorRepository::class
+        );
+        $this->app->bind(
+            BranchRepositoryInterface::class,
+            BranchRepository::class
+         );
         // You can register other repositories here
     }
 

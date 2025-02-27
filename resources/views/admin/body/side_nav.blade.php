@@ -32,7 +32,22 @@
                      
                          
                         
-                        
+                                                       
+                            <div  class="menu-item menu-accordion">
+                                
+                                <a class="menu-link" href="{{ route('admin.dashboard')}}">
+
+                                    <span class="menu-icon">
+                                        <i class="fas fa-list-alt"></i> <!-- Categories icon -->
+
+                                    </span>
+                                    <span class="menu-title">{{ __('Dashbaoard')}}</span>
+
+                                </a>
+                            
+                                <!--end:Menu sub-->
+                            </div>
+
             
                                                  
                             <div  class="menu-item menu-accordion">
@@ -65,7 +80,34 @@
                                 <!--end:Menu sub-->
                             </div>
                     
-                                                 
+                            <div  class="menu-item menu-accordion">
+                                
+                                <a class="menu-link" href="{{ route('vendors.index')}}">
+
+                                    <span class="menu-icon">
+                                        <i class="fas fa-list-alt"></i> <!-- Categories icon -->
+
+                                    </span>
+                                    <span class="menu-title">{{ __('vendors')}}</span>
+
+                                </a>
+                            
+                                <!--end:Menu sub-->
+                            </div>          
+                            <div  class="menu-item menu-accordion">
+                                
+                                <a class="menu-link" href="{{ route('admin.branches.index')}}">
+
+                                    <span class="menu-icon">
+                                        <i class="fas fa-list-alt"></i> <!-- Categories icon -->
+
+                                    </span>
+                                    <span class="menu-title">{{ __('branches')}}</span>
+
+                                </a>
+                            
+                                <!--end:Menu sub-->
+                            </div>  
                
                              
                                                       </div>

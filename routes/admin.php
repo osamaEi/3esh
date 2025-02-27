@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\VendorController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\RegisterController;
@@ -27,4 +29,17 @@ Route::group(['prefix' => 'admin','auth:admin'], function () {
    Route::get('categories/tree', [CategoryController::class, 'tree'])->name('categories.tree');
    
    Route::resource('settings', SettingController::class);
+
+
+   Route::prefix('admin')->name('admin.')->group(function() {
+    
+    Route::resource('branches', BranchController::class);
+});
+
+
+   Route::resource('vendors', VendorController::class);
+   Route::post('vendors/{id}/approve', [VendorController::class, 'approve'])->name('vendors.approve');
+   Route::post('vendors/{id}/block', [VendorController::class, 'block'])->name('vendors.block');
+   Route::post('vendors/{id}/unblock', [VendorController::class, 'unblock'])->name('vendors.unblock');
+
 });

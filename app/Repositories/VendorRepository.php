@@ -26,6 +26,10 @@ class VendorRepository implements VendorRepositoryInterface
 
     public function create(array $data)
     {
+
+        if (isset($data['logo'])) {
+            $data['logo'] = $this->uploadPhoto($data['logo']);
+        }
         return $this->model->create($data);
     }
 
@@ -65,4 +69,15 @@ class VendorRepository implements VendorRepositoryInterface
         $vendor->save();
         return $vendor;
     }
+
+public function uploadPhoto($photo)
+{
+    $path = $photo->store('public/vendors'); 
+    return str_replace('public/', '', $path); 
+}
+
+protected function deletePhoto($path)
+{
+    \Storage::delete('public/' . $path);
+}
 }

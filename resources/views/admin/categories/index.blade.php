@@ -3,7 +3,6 @@
 @section('content')
 
 <div class="container">
-    <h1 class="my-4 text-center">{{ __('Categories') }}</h1>
     <div class="d-flex justify-content-between mb-4">
         <a href="{{ route('categories.create') }}" class="btn btn-primary">
             <i class="fas fa-plus"></i> {{ __('Create New Category') }}

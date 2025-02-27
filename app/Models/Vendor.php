@@ -13,6 +13,17 @@ class Vendor extends Model
     use HasFactory;
 
 
+    protected $fillable = [
+        'business_name',
+        'email',
+        'logo',
+        'contact_person',
+        'blocked',
+        'is_approved',
+        'is_active',
+    ];
+
+
 
     public function branches(){
 
@@ -24,11 +35,9 @@ class Vendor extends Model
         return $this->hasMany(Employee::class);
     }
 
-    public function categories(){
-
-        return $this->belongsToMany(Category::class);
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'vendor_categories');
     }
-
-
 
 }

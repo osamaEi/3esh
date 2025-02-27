@@ -54,7 +54,6 @@ class CategoryRepository implements CategoryRepositoryInterface
             $data['level'] = 1;
         }
         if (isset($data['photo'])) {
-            // Delete old photo if exists
             if ($category->photo) {
                 $this->deletePhoto($category->photo);
             }
