@@ -6,9 +6,11 @@ use App\Repositories\BranchRepository;
 use App\Repositories\VendorRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
+use App\Repositories\EmployeeRepository;
 use App\Repositories\Contracts\BranchRepositoryInterface;
 use App\Repositories\Contracts\VendorRepositoryInterface;
 use App\Repositories\Contracts\CategoryRepositoryInterface;
+use App\Repositories\Contracts\EmployeeRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,10 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             BranchRepositoryInterface::class,
             BranchRepository::class
+         );
+         $this->app->bind(
+            EmployeeRepositoryInterface::class,
+            EmployeeRepository::class
          );
         // You can register other repositories here
     }

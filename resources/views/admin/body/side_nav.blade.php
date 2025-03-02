@@ -93,7 +93,21 @@
                                 </a>
                             
                                 <!--end:Menu sub-->
-                            </div>          
+                            </div>      
+                            <div  class="menu-item menu-accordion">
+                                
+                                <a class="menu-link" href="{{ route('employees.index')}}">
+
+                                    <span class="menu-icon">
+                                        <i class="fas fa-list-alt"></i> <!-- Categories icon -->
+
+                                    </span>
+                                    <span class="menu-title">{{ __('Employees')}}</span>
+
+                                </a>
+                            
+                                <!--end:Menu sub-->
+                            </div>      
                             <div  class="menu-item menu-accordion">
                                 
                                 <a class="menu-link" href="{{ route('admin.branches.index')}}">

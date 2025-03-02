@@ -39,7 +39,7 @@ public function show($id)
 public function store(BranchRequest $request)
 {
     $this->branchRepository->create($request->validated());
-    return redirect()->route('admin.branches.index')->with('success', 'Branch created successfully.');
+    return redirect()->route('admin.branches.index')->with('success', __('Branch created successfully.'));
 }
 public function edit($id)
 {
@@ -51,6 +51,6 @@ public function edit($id)
 public function update(BranchRequest $request, $id)
 {
     $this->branchRepository->update($id, $request->validated());
-    return redirect()->route('admin.branches.index')->with('success', 'Branch updated successfully.');
+    return redirect()->route('admin.branches.index')->with('success', __('Branch updated successfully.'));
 }
 }

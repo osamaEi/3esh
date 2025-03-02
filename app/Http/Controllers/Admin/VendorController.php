@@ -73,34 +73,34 @@ class VendorController extends Controller
     public function update(VendorRequest $request, $id)
     {
         $this->vendorRepository->update($id, $request->validated());
-        return redirect()->route('vendors.index')->with('success', 'Vendor updated successfully.');
+        return redirect()->route('vendors.index')->with('success', __('Vendor updated successfully.'));
     }
 
     // Remove the specified vendor from the database
     public function destroy($id)
     {
         $this->vendorRepository->delete($id);
-        return redirect()->route('vendors.index')->with('success', 'Vendor deleted successfully.');
+        return redirect()->route('vendors.index')->with('success', __('Vendor deleted successfully.'));
     }
 
     // Approve a vendor
     public function approve($id)
     {
         $this->vendorRepository->approve($id);
-        return redirect()->route('vendors.index')->with('success', 'Vendor approved successfully.');
+        return redirect()->route('vendors.index')->with('success', __('Vendor approved successfully.'));
     }
 
     // Block a vendor
     public function block($id)
     {
         $this->vendorRepository->block($id);
-        return redirect()->route('vendors.index')->with('success', 'Vendor blocked successfully.');
+        return redirect()->route('vendors.index')->with('success', __('Vendor blocked successfully.'));
     }
 
     // Unblock a vendor
     public function unblock($id)
     {
         $this->vendorRepository->unblock($id);
-        return redirect()->route('vendors.index')->with('success', 'Vendor unblocked successfully.');
+        return redirect()->route('vendors.index')->with('success', __('Vendor unblocked successfully.'));
     }
 }

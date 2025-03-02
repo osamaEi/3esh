@@ -3,7 +3,7 @@
 <div class="container mt-5">
     <div class="card shadow-sm">
         <div class="card-header">
-            <h4>{{__('Vendor Details')}}</h4>
+            <h4 style="margin-top: 25px;">{{__('Vendor Details')}}</h4>
         </div>
         <div class="card-body">
             <div class="row">
@@ -36,11 +36,17 @@
     <!-- Branches Section -->
     <div class="card shadow-sm mt-4">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h4>{{__('Branches')}}</h4>
-            <a href="{{ route('admin.branches.create', ['vendor_id' => $vendor->id]) }}" class="btn btn-sm btn-primary">
-                <i class="fas fa-plus"></i> {{__('Add Branch')}}
-            </a>
+            <h4>{{ __('Branches') }}</h4>
+            <div class="d-flex gap-2"> 
+                <a href="{{ route('admin.branches.create', ['vendor_id' => $vendor->id]) }}" class="btn btn-sm btn-primary">
+                    <i class="fas fa-plus"></i> {{ __('Add Branch') }}
+                </a>
+                <a href="{{ route('employees.create', ['vendor_id' => $vendor->id]) }}" class="btn btn-sm btn-primary">
+                    <i class="fas fa-plus"></i> {{ __('Add Employee') }}
+                </a>
+            </div>
         </div>
+        
         <div class="card-body">
             @if($vendor->branches->count() > 0)
                 <div class="table-responsive">

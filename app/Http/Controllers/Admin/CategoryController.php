@@ -116,7 +116,7 @@ class CategoryController extends Controller
         $this->categoryRepository->delete($id);
         
         return redirect()->route('categories.index')
-                        ->with('success', 'Category deleted successfully.');
+                        ->with('success', __('Category deleted successfully.'));
     }
     
     /**

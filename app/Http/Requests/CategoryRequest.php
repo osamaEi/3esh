@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CategoryRequest extends FormRequest
@@ -17,21 +16,33 @@ class CategoryRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules()
     {
-        $rules = [
-            'name' => 'required|string|max:255',
+        return [
+            'name'        => 'required|string|max:255',
             'description' => 'nullable|string',
-            'parent_id' => 'nullable|exists:categories,id',
-            'is_active' => 'boolean',
-            'level_id' =>'integer',
-            'photo' => 'nullable'
+            'parent_id'   => 'nullable|exists:categories,id',
+            'is_active'   => 'boolean',
+            'level_id'    => 'integer',
+            'photo'       => 'nullable',
         ];
-        
-       
-        return $rules;
+    }
+
+    /**
+     * Custom error messages.
+     */
+    public function messages(): array
+    {
+        return [
+            'name.required'        => __('validation.category_name_required'),
+            'name.string'          => __('validation.category_name_string'),
+            'name.max'             => __('validation.category_name_max'),
+            'description.string'   => __('validation.category_description_string'),
+            'parent_id.exists'     => __('validation.category_parent_id_exists'),
+            'is_active.boolean'    => __('validation.category_is_active_boolean'),
+            'level_id.integer'     => __('validation.category_level_id_integer'),
+            'photo.nullable'       => __('validation.category_photo_nullable'),
+        ];
     }
 }

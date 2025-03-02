@@ -35,7 +35,7 @@ class SettingController extends Controller
         }
         
         Setting::create($data);
-        return redirect()->route('settings.index')->with('success', 'Setting created.');
+        return redirect()->route('settings.index')->with('success', __('Setting created.'));
     }
     
     public function edit($id) {
@@ -85,12 +85,12 @@ class SettingController extends Controller
         }
         
         $setting->update($data);
-        return redirect()->route('settings.index')->with('success', 'Setting updated.');
+        return redirect()->route('settings.index')->with('success', __('Setting updated.'));
     }
 
     public function destroy($id) {
         $setting = Setting::findOrFail($id);
         $setting->delete();
-        return redirect()->route('settings.index')->with('success', 'Setting deleted.');
+        return redirect()->route('settings.index')->with('success', __('Setting deleted.'));
     }
 }
