@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h2>Branches</h2>
-            <a href="{{ route('admin.branches.create') }}" class="btn btn-primary">Add New Branch</a>
+            <a href="{{ route('admin.branches.create') }}" class="btn btn-primary">{{__('Add New Branch')}}</a>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -19,13 +19,13 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Vendor</th>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Phone</th>
-                            <th>Manager</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+                            <th>{{__('Vendor')}}</th>
+                            <th>{{__('Name')}}</th>
+                            <th>{{__('Address')}}</th>
+                            <th>{{__('Phone')}}</th>
+                            <th>{{__('Manager')}}</th>
+                            <th>{{__('Status')}}</th>
+                            <th>{{__('Actions')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,36 +39,36 @@
                                 <td>{{ $branch->manager_name ?? 'N/A' }}</td>
                                 <td>
                                     @if($branch->is_active)
-                                        <span class="badge bg-success">Active</span>
+                                        <span class="badge bg-success">{{__('Active')}}</span>
                                     @else
-                                        <span class="badge bg-danger">Inactive</span>
+                                        <span class="badge bg-danger">{{__('Inactive')}}</span>
                                     @endif
                                     
                                     @if($branch->is_approved)
-                                        <span class="badge bg-info">Approved</span>
+                                        <span class="badge bg-info">{{__('Approved')}}</span>
                                     @else
-                                        <span class="badge bg-warning">Pending</span>
+                                        <span class="badge bg-warning">{{__('Pending')}}</span>
                                     @endif
                                 </td>
                                 <td>
                                         <a href="{{ route('admin.branches.show', $branch->id) }}" class="btn btn-sm btn-info">
-                                            <i class="fas fa-eye"></i> View
+                                            <i class="fas fa-eye"></i> {{__('View')}}
                                         </a>
                                         <a href="{{ route('admin.branches.edit', $branch->id) }}" class="btn btn-sm btn-primary">
-                                            <i class="fas fa-edit"></i> Edit
+                                            <i class="fas fa-edit"></i> {{__('Edit')}}
                                         </a>
                                         <form action="{{ route('admin.branches.destroy', $branch->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this branch?');" class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">
-                                                <i class="fas fa-trash"></i> Delete
+                                                <i class="fas fa-trash"></i> {{__('Delete')}}
                                             </button>
                                         </form>
                                 </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="8" class="text-center">No branches found.</td>
+                                <td colspan="8" class="text-center">{{__('No branches found')}}.</td>
                             </tr>
                         @endforelse
                     </tbody>
