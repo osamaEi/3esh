@@ -136,7 +136,23 @@
                             
                                 <!--end:Menu sub-->
                             </div>  
-                             
+                            
+
+
+                            <div  class="menu-item menu-accordion">
+                                
+                                <a class="menu-link" href="{{ route('admin.subscriptions.index')}}">
+
+                                    <span class="menu-icon">
+                                        <i class="fas fa-list-alt"></i> <!-- Categories icon -->
+
+                                    </span>
+                                    <span class="menu-title">{{ __('Susbscription')}}</span>
+
+                                </a>
+                            
+                                <!--end:Menu sub-->
+                            </div>  
                                                       </div>
                                 <!--end:Menu sub-->
                             </div>

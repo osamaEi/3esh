@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\VendorController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\SubscriptionController;
 use App\Http\Controllers\Admin\Auth\RegisterController;
 use App\Http\Controllers\Admin\Auth\DashboardController;
 
@@ -60,4 +61,16 @@ Route::post('/users/{user_id}/attach-subscription', [UserController::class, 'att
    Route::post('vendors/{id}/block', [VendorController::class, 'block'])->name('vendors.block');
    Route::post('vendors/{id}/unblock', [VendorController::class, 'unblock'])->name('vendors.unblock');
 
+});
+
+Route::prefix('admin')->group(function () {
+    Route::resource('subscriptions', SubscriptionController::class)->names([
+        'index' => 'admin.subscriptions.index',
+        'create' => 'admin.subscriptions.create',
+        'store' => 'admin.subscriptions.store',
+        'show' => 'admin.subscriptions.show',
+        'edit' => 'admin.subscriptions.edit',
+        'update' => 'admin.subscriptions.update',
+        'destroy' => 'admin.subscriptions.destroy',
+    ]);
 });
