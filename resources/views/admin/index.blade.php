@@ -35,13 +35,15 @@
 								</i>
 							</div>
 						</div>
-			
+						<!--end::Sidebar mobile toggle-->
+						<!--begin::Mobile logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 							<a href="../../demo1/dist/index.html" class="d-lg-none">
 								<img alt="Logo" src="assets/media/logos/default-small.svg" class="h-30px" />
 							</a>
 						</div>
-					
+						<!--end::Mobile logo-->
+						<!--begin::Header wrapper-->
 					@include('admin.body.top_nav')
 
 				</div>
@@ -51,7 +53,7 @@
 				<!--end::Header-->
 			@include('admin.body.side_nav')
 						<!--begin::Footer-->
-	
+					
 
 						
 					</div>
@@ -63,7 +65,7 @@
 							<!--begin::Toolbar-->
 							<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
 								<!--begin::Toolbar container-->
-	
+					
                                 
                                 @yield('content')
 
