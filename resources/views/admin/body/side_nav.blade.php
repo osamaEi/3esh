@@ -122,7 +122,20 @@
                             
                                 <!--end:Menu sub-->
                             </div>  
-               
+                            <div  class="menu-item menu-accordion">
+                                
+                                <a class="menu-link" href="{{ route('admin.users.index')}}">
+
+                                    <span class="menu-icon">
+                                        <i class="fas fa-list-alt"></i> <!-- Categories icon -->
+
+                                    </span>
+                                    <span class="menu-title">{{ __('users')}}</span>
+
+                                </a>
+                            
+                                <!--end:Menu sub-->
+                            </div>  
                              
                                                       </div>
                                 <!--end:Menu sub-->
