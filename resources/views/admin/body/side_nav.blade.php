@@ -35,7 +35,7 @@
                                                        
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('admin.dashboard')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.dashboard') }}" href="{{ route('admin.dashboard')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -52,7 +52,7 @@
                                                  
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('categories.index')}}">
+                                <a class="menu-link {{ isActiveRoute('categories.index') }}" href="{{ route('categories.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -67,7 +67,7 @@
 
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('settings.index')}}">
+                                <a class="menu-link {{ isActiveRoute('settings.index') }}" href="{{ route('settings.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -82,7 +82,7 @@
                     
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('vendors.index')}}">
+                                <a class="menu-link {{ isActiveRoute('vendors.index') }}" href="{{ route('vendors.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -96,7 +96,7 @@
                             </div>      
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('employees.index')}}">
+                                <a class="menu-link {{ isActiveRoute('employees.index') }}" href="{{ route('employees.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -110,7 +110,7 @@
                             </div>      
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('admin.branches.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.branches.index') }}" href="{{ route('admin.branches.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -124,7 +124,7 @@
                             </div>  
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('admin.users.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.users.index') }}" href="{{ route('admin.users.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -141,7 +141,7 @@
 
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link" href="{{ route('admin.subscriptions.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.subscriptions.index') }}" href="{{ route('admin.subscriptions.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
