@@ -3,8 +3,8 @@
 @section('content')
 <div class="container-fluid">
     <div class="card shadow-lg">
-        <div class="card-header bg-primary text-white">
-            <h4 class="mb-0"><i class="fas fa-edit"></i> Edit Subscription Plan</h4>
+        <div class="card-header bg-secondary text-white">
+            <h4 class="mt-5"><i class="fas fa-edit"></i> Edit Subscription Plan</h4>
         </div>
         <div class="card-body">
             <form action="{{ route('admin.subscriptions.update', $subscription->id) }}" method="POST" enctype="multipart/form-data">

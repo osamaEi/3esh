@@ -17,7 +17,6 @@ class SubscribtionRepository implements SubscriptionRepositoryInterface
     {
         return Subscription::findOrFail($id);
     }
-
     public function create(array $data)
     {
         return Subscription::create($data);
@@ -25,9 +24,9 @@ class SubscribtionRepository implements SubscriptionRepositoryInterface
 
     public function update($id, array $data)
     {
-        $user = Subscription::findOrFail($id);
-        $user->update($data);
-        return $user;
+        $subscription = Subscription::findOrFail($id);
+        $subscription->update($data);
+        return $subscription;
     }
 
     public function delete($id)

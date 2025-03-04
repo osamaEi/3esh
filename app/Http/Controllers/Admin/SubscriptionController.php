@@ -30,16 +30,21 @@ class SubscriptionController extends Controller
     public function store(SubscriptionRequest $request)
     {
         $data = $request->validated();
-
+        
         // Handle photo upload
         if ($request->hasFile('photo')) {
             $data['photo'] = $request->file('photo')->store('subscription_photos', 'public');
         }
-
+        
+        // Convert features from string to JSON if needed
+        if (isset($data['features']) && is_string($data['features'])) {
+            $data['features'] = json_decode($data['features'], true);
+        }
+        
         $this->subscriptionRepository->create($data);
-        return redirect()->route('subscriptions.index')->with('success', 'Subscription created successfully.');
+        
+        return redirect()->route('admin.subscriptions.index')->with('success', 'Subscription created successfully.');
     }
-
     public function show($id)
     {
         $subscription = $this->subscriptionRepository->findById($id);

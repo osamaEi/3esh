@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="card shadow-lg">
-        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
             <h4 class="mb-0"><i class="fas fa-list"></i> Subscription Plans</h4>
             <a href="{{ route('admin.subscriptions.create') }}" class="btn btn-light">
                 <i class="fas fa-plus"></i> Create New
