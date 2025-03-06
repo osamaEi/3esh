@@ -52,7 +52,7 @@
                                                  
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link {{ isActiveRoute('categories.index') }}" href="{{ route('categories.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.categories.index') }}" href="{{ route('admin.categories.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -67,7 +67,7 @@
 
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link {{ isActiveRoute('settings.index') }}" href="{{ route('settings.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.settings.index') }}" href="{{ route('admin.settings.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -82,7 +82,7 @@
                     
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link {{ isActiveRoute('vendors.index') }}" href="{{ route('vendors.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.vendors.index') }}" href="{{ route('admin.vendors.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
@@ -96,7 +96,7 @@
                             </div>      
                             <div  class="menu-item menu-accordion">
                                 
-                                <a class="menu-link {{ isActiveRoute('employees.index') }}" href="{{ route('employees.index')}}">
+                                <a class="menu-link {{ isActiveRoute('admin.employees.index') }}" href="{{ route('admin.employees.index')}}">
 
                                     <span class="menu-icon">
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->

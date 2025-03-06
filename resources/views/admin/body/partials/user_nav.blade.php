@@ -166,7 +166,7 @@
         </div>
 
         <div class="menu-item px-5">
-            <form method="POST" action="{{ route('adminLogout') }}">
+            <form method="POST" action="{{ route('admin.Logout') }}">
                 @csrf
                 <button type="submit" class="menu-link px-5" style="background: none; border: none; padding: 0; color: inherit; cursor: pointer;">
                     {{__('Sign Out')}}

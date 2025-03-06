@@ -10,9 +10,7 @@
 <body class="font-sans">
     <!-- Header Navigation -->
     <header class="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="{{asset('photos/logo.png')}}" alt="Live Plus Logo" class="h-12 w-12 bg-purple-700 rounded-lg p-1">
-        </div>
+            <img src="{{asset('photos/logo.png')}}" alt="Live Plus Logo" class="h-13 w-13 p-1">
         <nav class="hidden md:flex space-x-8">
             <a href="#" class="text-gray-700">Home</a>
             <a href="#" class="text-gray-700">Learn</a>
@@ -358,7 +356,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
-                    <img src="https://via.placeholder.com/64x64" alt="Live Plus Logo" class="h-12 w-12 bg-purple-700 rounded-lg p-1 mb-4">
+                    <img src="{{asset('photos/logo.png')}}" alt="Live Plus Logo" class="h-13 w-13  p-1 mb-4">
                     <p class="text-gray-400 mb-6">Transform your crypto business with Crypgo Premier, a template for startups and blockchain services.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white">
