@@ -172,6 +172,20 @@
                                                 <label class="block text-sm font-medium text-gray-700">Phone</label>
                                                 <input type="text" name="employees[0][phone]" class="employee-phone mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                             </div>
+
+
+    <!-- Employee Password -->
+    <div>
+        <label class="block text-sm font-medium text-gray-700">Password <span class="text-red-500">*</span></label>
+        <input type="password" name="employees[0][password]" class="employee-password mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+        <p class="mt-1 text-xs text-red-600 hidden employee-password-error"></p>
+    </div>
+
+    <!-- Employee Password Confirmation -->
+    <div>
+        <label class="block text-sm font-medium text-gray-700">Confirm Password <span class="text-red-500">*</span></label>
+        <input type="password" name="employees[0][password_confirmation]" class="employee-password-confirmation mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+    </div>
                                         </div>
 
                                         <div class="mt-4">

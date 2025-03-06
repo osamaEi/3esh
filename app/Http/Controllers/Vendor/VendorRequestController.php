@@ -7,6 +7,7 @@ use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class VendorRequestController extends Controller
@@ -24,6 +25,9 @@ class VendorRequestController extends Controller
      */
     public function store(Request $request)
     {
+        // Check if this is an AJAX request
+        $isAjax = $request->ajax() || $request->expectsJson() || $request->header('X-Requested-With') === 'XMLHttpRequest';
+        
         // Validate vendor data
         $vendorValidator = Validator::make($request->all(), [
             'business_name' => 'required|string|max:255',
@@ -32,14 +36,18 @@ class VendorRequestController extends Controller
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
+    
         if ($vendorValidator->fails()) {
-            return response()->json([
-                'success' => false,
-                'errors' => $vendorValidator->errors()
-            ], 422);
+            if ($isAjax) {
+                return response()->json([
+                    'success' => false,
+                    'errors' => $vendorValidator->errors()
+                ], 422);
+            }
+            
+            return back()->withErrors($vendorValidator)->withInput();
         }
-
+    
         // Validate employees data if present
         $employeesData = $request->employees ?? [];
         $employeeValidationRules = [];
@@ -51,20 +59,26 @@ class VendorRequestController extends Controller
                 $employeeValidationRules["employees.{$key}.phone"] = 'nullable|string|max:20';
                 $employeeValidationRules["employees.{$key}.position"] = 'nullable|string|max:255';
                 $employeeValidationRules["employees.{$key}.photo"] = 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048';
+                $employeeValidationRules["employees.{$key}.password"] = 'required|min:8';
+                $employeeValidationRules["employees.{$key}.password_confirmation"] = 'required|same:employees.'.$key.'.password';
             }
         }
-
+    
         if (!empty($employeeValidationRules)) {
             $employeeValidator = Validator::make($request->all(), $employeeValidationRules);
             
             if ($employeeValidator->fails()) {
-                return response()->json([
-                    'success' => false,
-                    'errors' => $employeeValidator->errors()
-                ], 422);
+                if ($isAjax) {
+                    return response()->json([
+                        'success' => false,
+                        'errors' => $employeeValidator->errors()
+                    ], 422);
+                }
+                
+                return back()->withErrors($employeeValidator)->withInput();
             }
         }
-
+    
         try {
             // Begin transaction
             DB::beginTransaction();
@@ -77,12 +91,12 @@ class VendorRequestController extends Controller
             ]);
             
             // Handle logo upload
-            if ($request->hasFile('logo')) {
+            if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
                 $vendorData['logo'] = $request->file('logo')->store('vendors/logos', 'public');
             }
             
             // Handle photo upload
-            if ($request->hasFile('photo')) {
+            if ($request->hasFile('photo') && $request->file('photo')->isValid()) {
                 $vendorData['photo'] = $request->file('photo')->store('vendors/photos', 'public');
             }
             
@@ -105,10 +119,13 @@ class VendorRequestController extends Controller
                             'position' => $employeeData['position'] ?? null,
                             'email' => $employeeData['email'] ?? null,
                             'phone' => $employeeData['phone'] ?? null,
+                            'password' => Hash::make($employeeData['password']), // Add password hashing
                         ]);
                         
                         // Handle employee photo upload if present
-                        if (isset($employeeData['photo']) && $employeeData['photo'] instanceof \Illuminate\Http\UploadedFile) {
+                        if (isset($employeeData['photo']) && 
+                            $employeeData['photo'] instanceof \Illuminate\Http\UploadedFile &&
+                            $employeeData['photo']->isValid()) {
                             $newEmployee->photo = $employeeData['photo']->store('employees/photos', 'public');
                         }
                         
@@ -124,7 +141,7 @@ class VendorRequestController extends Controller
             // Commit transaction
             DB::commit();
             
-            if ($request->ajax()) {
+            if ($isAjax) {
                 return response()->json([
                     'success' => true,
                     'message' => 'Vendor registration submitted successfully! Your application is pending approval.',
@@ -142,14 +159,19 @@ class VendorRequestController extends Controller
             // Rollback transaction on error
             DB::rollBack();
             
-            if ($request->ajax()) {
+            // Log the error for debugging
+            \Log::error('Vendor registration error: ' . $e->getMessage());
+            \Log::error($e->getTraceAsString());
+            
+            if ($isAjax) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'An error occurred: ' . $e->getMessage()
+                    'message' => 'An error occurred while processing your request.',
+                    'debug' => config('app.debug') ? $e->getMessage() : null
                 ], 500);
             }
             
-            return back()->withInput()->withErrors(['error' => 'An error occurred: ' . $e->getMessage()]);
+            return back()->withInput()->withErrors(['error' => 'An error occurred while processing your request.']);
         }
     }
     
