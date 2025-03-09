@@ -15,6 +15,12 @@ class BranchRepository implements BranchRepositoryInterface
     {
         return Branch::findOrFail($id);
     }
+    public function findByVendor($id)
+    {
+        return Branch::where('vendor_id',$id)->get();
+
+    }
+
     public function show($id)
     {
         return $this->findById($id);

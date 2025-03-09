@@ -56,9 +56,9 @@ class EmployeeController extends Controller
     public function edit($id)
     {
         $employee = $this->employeeRepository->findById($id);
-        $employee = Auth::guard('employee')->user();
+        $employeess = Auth::guard('employee')->user();
     
-        $vendorId = $employee->vendor_id;
+        $vendorId = $employeess->vendor_id;
         $branches = Branch::where('vendor_id',$vendorId)->get();
 
         return view('vendors.employees.edit', compact('employee','vendorId','branches'));

@@ -74,9 +74,9 @@
                             <i class="fas fa-tachometer-alt mr-3 text-purple-300"></i>
                             <span class="font-medium">Dashboard</span>
                         </a>
-                        <a href="{{ route('vendors.data') }}" class="flex items-center p-3 text-purple-100 bg-purple-800 bg-opacity-50 rounded-lg hover:bg-purple-600 hover:text-white transition duration-200 ease-in-out transform hover:-translate-y-0.5 {{ isActiveRouteVendor('vendors.dashboard') }}">
+                        <a href="{{ route('vendors.branches.index') }}" class="flex items-center p-3 text-purple-100 bg-purple-800 bg-opacity-50 rounded-lg hover:bg-purple-600 hover:text-white transition duration-200 ease-in-out transform hover:-translate-y-0.5 {{ isActiveRouteVendor('vendors.branches') }}">
                             <i class="fas fa-tachometer-alt mr-3 text-purple-300"></i>
-                            <span class="font-medium">Vendors Data</span>
+                            <span class="font-medium">Branches</span>
                         </a>
                         <a href="{{ route('vendors.employees') }}" class="flex items-center p-3 text-purple-100 bg-purple-800 bg-opacity-50 rounded-lg hover:bg-purple-600 hover:text-white transition duration-200 ease-in-out transform hover:-translate-y-0.5 {{ isActiveRouteVendor('vendors.employees') }}">
                             <i class="fas fa-users mr-3 text-purple-300"></i>

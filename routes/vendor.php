@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Vendor\LoginController;
+use App\Http\Controllers\Vendor\BranchController;
 use App\Http\Controllers\Vendor\EmployeeController;
 use App\Http\Controllers\Vendor\DashboardController;
 use App\Http\Controllers\Vendor\VendorRequestController;
@@ -37,3 +38,12 @@ Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'v
     Route::post('/logout', [LoginController::class, 'vendorLogout'])->name('logout'); // Changed 'Logout' to 'logout'
 });
 
+Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'vendors.'], function () {
+    // Branch Routes
+    Route::get('/branches', [BranchController::class, 'index'])->name('branches.index');
+    Route::get('/branches/create', [BranchController::class, 'create'])->name('branches.create');
+    Route::post('/branches', [BranchController::class, 'store'])->name('branches.store');
+    Route::get('/branches/{id}', [BranchController::class, 'show'])->name('branches.show');
+    Route::get('/branches/{id}/edit', [BranchController::class, 'edit'])->name('branches.edit');
+    Route::put('/branches/{id}', [BranchController::class, 'update'])->name('branches.update');
+});
