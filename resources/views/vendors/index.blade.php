@@ -70,7 +70,7 @@
                         <h3 class="text-xl font-bold tracking-wide">Vendor Hub</h3>
                     </div>
                     <nav class="space-y-3">
-                        <a href="{{ route('vendors.dashboard') }}" class="flex items-center p-3 text-purple-100 bg-purple-800 bg-opacity-50 rounded-lg hover:bg-purple-600 hover:text-white transition duration-200 ease-in-out transform hover:-translate-y-0.5 {{ isActiveRouteVendor('vendors.dashboard') }}">
+                        <a href="{{ route('vendors.dashboard') }}" class="flex items-center p-3 text-purple-100 bg-purple-800 bg-opacity-50 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-1 {{ request()->routeIs('vendors.dashboard') ? 'bg-purple-600 text-white' : '' }}">
                             <i class="fas fa-tachometer-alt mr-3 text-purple-300"></i>
                             <span class="font-medium">Dashboard</span>
                         </a>
