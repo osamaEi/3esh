@@ -29,7 +29,11 @@ Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'v
     Route::get('/data', [DashboardController::class, 'data'])->name('data');
 
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
-
+    Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');
+    Route::post('/employees/create', [EmployeeController::class, 'store'])->name('employees.store');
+    Route::get('/employees/{employee}/edit', [EmployeeController::class, 'edit'])->name('employees.edit');
+    Route::put('/employees/{employee}/edit', [EmployeeController::class, 'update'])->name('employees.update');
+    Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy'])->name('employees.destroy');
     Route::post('/logout', [LoginController::class, 'vendorLogout'])->name('logout'); // Changed 'Logout' to 'logout'
 });
 

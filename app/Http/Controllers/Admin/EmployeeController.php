@@ -35,7 +35,6 @@ class EmployeeController extends Controller
 
     // Show the form for creating a new employee
     public function create()
-
     {     
         
         $vendors = $this->vendorRepository->all();
@@ -47,13 +46,9 @@ class EmployeeController extends Controller
     public function store(EmployeeRequest $request)
     {
         $data = $request->validated();
-    
-
-    
-        // Create the employee
         $employee = $this->employeeRepository->create($data);
     
-        // Attach categories
+      
         if ($request->has('categories')) {
             $employee->categories()->sync($request->categories);
         }
