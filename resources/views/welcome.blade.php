@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Plus - Start Spending The Smart Way</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body class="font-sans">
-    <!-- Header Navigation -->
-    <header class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <img src="{{asset('photos/logo.png')}}" alt="Live Plus Logo" class="h-13 w-13 p-1">
-        <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-700">Home</a>
-            <a href="#" class="text-gray-700">Learn</a>
-            <a href="#" class="text-gray-700">FAQs</a>
-            <a href="#" class="text-gray-700">Join us</a>
-        </nav>
-        <a href="#" class="bg-purple-700 text-white px-6 py-2 rounded-lg">Install App</a>
-    </header>
-
+@include('vendors.body.header')
 <!-- Hero Section with Two Photos on Right -->
-<section class="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center">
+<section class="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center bg-white">
     <!-- Left Content -->
     <div class="md:w-1/2 mb-10 md:mb-0 pr-8">
       <h1 class="text-5xl font-bold mb-6 text-black">Start Spending The Smart Way</h1>
@@ -53,7 +32,7 @@
     <!-- Right Images - Two Photos Side by Side -->
     <div class="md:w-1/2 flex relative">
       <!-- Background purple rectangle -->
-      <div class="absolute inset-0 bg-purple-200 rounded-3xl"></div>
+      <div class="absolute inset-0  rounded-3xl"></div>
       
       <!-- Left Phone UI Image -->
       <div class="relative z-10 w-1/3 -mr-4 self-center">
@@ -62,12 +41,12 @@
       
       <!-- Right Woman Image -->
       <div class="relative z-0 w-3/4">
-        <img src="{{asset('photos/8.png')}}" alt="Woman using app" class="w-full h-auto">
+        <img src="" alt="Woman using app" class="w-full h-auto">
       </div>
     </div>
   </section>
     <!-- Benefits Section -->
-    <section class="py-16 bg-white">
+    <section class=" bg-white">
         <div class="container mx-auto px-4 text-center mb-12">
             <h2 class="text-3xl font-bold mb-6">Make every penny count</h2>
             <p class="text-lg text-gray-600">Spend smarter, lower your bills, get cashback on everything you buy.</p>
@@ -75,7 +54,7 @@
     </section>
 
     <!-- Features Section with Payment and Security Cards -->
-<section class="container mx-auto px-4 py-16 flex flex-col md:flex-row gap-6">
+<section class="container mx-auto px-4 flex flex-col md:flex-row gap-6 bg-white">
     <!-- Payment Feature Card -->
    <!-- Payment Feature Section with Full-Height Phone -->
 <!-- Payment Feature Section with Full-Height Phone -->
@@ -114,7 +93,7 @@
     </div>
 </section>
 <!-- Payment Methods and Offers Section -->
-<section class="container mx-auto px-4 py-12">
+<section class="container mx-auto px-4 py-12 bg-white">
     <div class="flex flex-col md:flex-row gap-6">
       <!-- Great Offers Card -->
       <div class="rounded-3xl p-8 md:w-1/3" style="background-color: #FFF4E2;">
@@ -154,12 +133,12 @@
 
     <!-- Features Section -->
 <!-- Features and Benefits Section -->
-<section class="py-16">
+<section class="bg-white">
     <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       <!-- Mobile App Image with Design Elements -->
       <div class="relative">
         <!-- Lines graphic around the phone -->
-        <div class="absolute inset-0 w-full h-full">
+        <div class="absolute inset-0 w-85 h-100">
           <img src="{{asset('photos/6.png')}}" alt="Design Lines" class="w-full h-full object-contain">
         </div>
         <!-- Phone Image -->
@@ -173,7 +152,7 @@
           <h2 class="text-5xl font-bold mb-12 text-black">Check Out Our Benefits</h2>
           
           <!-- Feature 1 -->
-          <div class="mb-10">
+          <div class="mb-10 bg-white">
             <div class="flex items-start mb-3">
               <div class="text-indigo-700 mr-4">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +165,7 @@
           </div>
           
           <!-- Feature 2 -->
-          <div class="mb-10">
+          <div class="mb-10 bg-white">
             <div class="flex items-start mb-3">
               <div class="text-indigo-700 mr-4">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +180,7 @@
           </div>
           
           <!-- Feature 3 -->
-          <div class="mb-10">
+          <div class="mb-10 bg-white">
             <div class="flex items-start mb-3">
               <div class="text-indigo-700 mr-4">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +198,7 @@
   </section>
 
  <!-- Why Choose Live Plus Section -->
-<section class="py-16 relative overflow-hidden">
+<section class="relative overflow-hidden bg-white">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row items-center">
         <!-- Left Content -->
@@ -249,7 +228,7 @@
 
     <!-- Get Started Section -->
 <!-- Ready To Get Started Section with Spacing -->
-<section class="py-16">
+<section class="bg-white">
     <div class="container mx-auto px-4">
       <div class="max-w-7xl mx-auto">
         <!-- Content with left and right spacing -->
@@ -261,7 +240,7 @@
   </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 bg-gray-100">
+    {{-- <section class="py-16 bg-gray-100 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
@@ -306,12 +285,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Contact Form -->
     <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="mb-8">
+        <div class="container mx-auto">
+            <div class="mb-8 max-w-4xl mx-auto">
                 <p class="uppercase text-sm text-gray-600 tracking-wider font-semibold mb-2">JOIN US</p>
                 <h2 class="text-4xl font-bold">Send Your Information To Join Us</h2>
             </div>
@@ -352,72 +331,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <img src="{{asset('photos/logo.png')}}" alt="Live Plus Logo" class="h-13 w-13  p-1 mb-4">
-                    <p class="text-gray-400 mb-6">Transform your crypto business with Crypgo Premier, a template for startups and blockchain services.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Benefits</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Why us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Other Pages</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Error 404</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Download app</h4>
-                    <div class="flex flex-col space-y-3">
-                        <a href="#" class="flex items-center bg-black text-white border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-900 transition duration-300">
-                            <i class="fab fa-google-play mr-2 text-2xl"></i>
-                            <div>
-                                <div class="text-xs">GET IT ON</div>
-                                <div class="text-sm font-semibold">Google Play</div>
-                            </div>
-                        </a>
-                        <a href="#" class="flex items-center bg-black text-white border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-900 transition duration-300">
-                            <i class="fab fa-apple mr-2 text-2xl"></i>
-                            <div>
-                                <div class="text-xs">Download on the</div>
-                                <div class="text-sm font-semibold">App Store</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <div class="text-gray-500 mb-4 md:mb-0">Terms & Agreements</div>
-                <div class="text-gray-500 mb-4 md:mb-0">Developed by TQNIA All rights reserved</div>
-                <div class="text-gray-500">Privacy Policy</div>
-            </div>
-        </div>
-    </footer>
+    @include('vendors.body.footer')
+
 </body>
 </html>
