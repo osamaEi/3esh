@@ -9,4 +9,10 @@ if (!function_exists('isActiveRoute')) {
         return '';
     }
 }
+
+if (!function_exists('isActiveRouteVendor')) {
+    function isActiveRouteVendor($routeName) {
+        return request()->routeIs($routeName) ? 'bg-purple-500 text-white' : '';
+    }
+}
 ?>

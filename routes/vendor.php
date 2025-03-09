@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Vendor\LoginController;
+use App\Http\Controllers\Vendor\EmployeeController;
 use App\Http\Controllers\Vendor\DashboardController;
 use App\Http\Controllers\Vendor\VendorRequestController;
 
@@ -24,6 +25,11 @@ Route::group(['prefix' => 'vendors', 'middleware' => 'guest:employee'], function
 
 Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'vendors.'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/data', [DashboardController::class, 'data'])->name('data');
+
+    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
+
     Route::post('/logout', [LoginController::class, 'vendorLogout'])->name('logout'); // Changed 'Logout' to 'logout'
 });
 

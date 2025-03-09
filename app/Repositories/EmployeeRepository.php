@@ -17,9 +17,9 @@ class EmployeeRepository implements EmployeeRepositoryInterface
         return Employee::findOrFail($id);
     }
 
-    public function findByVendor($id)
+    public function vendorData($id)
     {
-        return Vendor::where('employee_id',$id)->get();
+        return Employee::where('vendor_id',$id)->get();
     }
 
     public function show($id)
