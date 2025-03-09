@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <div class="card shadow-sm">
         <div class="card-body">
-            <form action="{{ route('vendors.update', $vendor->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.vendors.update', $vendor->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">

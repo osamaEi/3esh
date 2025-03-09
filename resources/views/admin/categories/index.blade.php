@@ -33,10 +33,10 @@
                 <i class="fas fa-folder me-2"></i>{{ __('All Categories') }}
             </h5>
             <div>
-                <a href="{{ route('categories.create') }}" class="btn btn-primary">
+                <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">
                     <i class="fas fa-plus me-1"></i> {{ __('Create New') }}
                 </a>
-                <a href="{{ route('categories.tree') }}" class="btn btn-info ms-2">
+                <a href="{{ route('admin.categories.tree') }}" class="btn btn-info ms-2">
                     <i class="fas fa-sitemap me-1"></i> {{ __('View Tree') }}
                 </a>
             </div>
@@ -99,7 +99,7 @@
                                 </td>
                                 <td class="text-end pe-3">
                                     <div class="btn-group">
-                                        <a href="{{ route('categories.edit', $category->id) }}" 
+                                        <a href="{{ route('admin.categories.edit', $category->id) }}" 
                                            class="btn btn-sm btn-outline-primary">
                                             <i class="fas fa-edit"></i>
                                         </a>
@@ -107,7 +107,7 @@
                                                 data-bs-toggle="modal" data-bs-target="#viewModal{{ $category->id }}">
                                             <i class="fas fa-eye"></i>
                                         </button>
-                                        <form action="{{ route('categories.destroy', $category->id) }}" 
+                                        <form action="{{ route('admin.categories.destroy', $category->id) }}" 
                                               method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-primary">
+                    <a href="{{ route('admin.categories.edit', $category->id) }}" class="btn btn-primary">
                         <i class="fas fa-edit me-1"></i> {{ __('Edit') }}
                     </a>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">

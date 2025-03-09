@@ -41,7 +41,7 @@
                 <a href="{{ route('admin.branches.create', ['vendor_id' => $vendor->id]) }}" class="btn btn-sm btn-primary">
                     <i class="fas fa-plus"></i> {{ __('Add Branch') }}
                 </a>
-                <a href="{{ route('employees.create', ['vendor_id' => $vendor->id]) }}" class="btn btn-sm btn-primary">
+                <a href="{{ route('admin.employees.create', ['vendor_id' => $vendor->id]) }}" class="btn btn-sm btn-primary">
                     <i class="fas fa-plus"></i> {{ __('Add Employee') }}
                 </a>
             </div>

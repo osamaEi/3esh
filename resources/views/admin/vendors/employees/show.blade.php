@@ -5,7 +5,7 @@
     <div class="card shadow-lg border-0 mt-4">
         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
             <h4><i class="fas fa-user"></i> Employee Details</h4>
-            <a href="{{ route('employees.index') }}" class="btn btn-light"><i class="fas fa-arrow-left"></i> Back to List</a>
+            <a href="{{ route('admin.employees.index') }}" class="btn btn-light"><i class="fas fa-arrow-left"></i> Back to List</a>
         </div>
         
         <div class="card-body">
@@ -56,10 +56,10 @@
         </div>
 
         <div class="card-footer d-flex justify-content-end">
-            <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-warning me-2">
+            <a href="{{ route('admin.employees.edit', $employee->id) }}" class="btn btn-warning me-2">
                 <i class="fas fa-edit fa-sm"></i> Edit
             </a>
-            <form action="{{ route('employees.destroy', $employee->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?');">
+            <form action="{{ route('admin.employees.destroy', $employee->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?');">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>

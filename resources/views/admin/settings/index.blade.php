@@ -10,7 +10,7 @@
                 {{-- <h4 class="text-white mb-0">
                     <i class="fas fa-cogs me-2"></i>{{__('System Settings')}}
                 </h4> --}}
-                <a href="{{ route('settings.create') }}" class="btn btn-light">
+                <a href="{{ route('admin.settings.create') }}" class="btn btn-light">
                     <i class="fas fa-plus-circle me-1"></i>{{__('Add New Setting')}}
                 </a>
             </div>
@@ -84,7 +84,7 @@
                                     @endif
                                 </td>
                                 <td class="text-center">
-                                        <a href="{{ route('settings.edit', $setting->id) }}" class="btn btn-sm btn-primary">
+                                        <a href="{{ route('admin.settings.edit', $setting->id) }}" class="btn btn-sm btn-primary">
                                             <i class="fas fa-edit"></i> Edit
                                         </a>
                                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" 
@@ -215,7 +215,7 @@
             const key = button.getAttribute('data-key');
             
             document.getElementById('deleteKey').textContent = key;
-            document.getElementById('deleteForm').action = `{{ route('settings.destroy', '') }}/${id}`;
+            document.getElementById('deleteForm').action = `{{ route('admin.settings.destroy', '') }}/${id}`;
         });
     });
 </script>

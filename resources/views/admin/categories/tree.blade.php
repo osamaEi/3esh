@@ -59,7 +59,7 @@
     </div>
 
     <div class="d-grid mt-4">
-        <a href="{{ route('categories.index') }}" class="btn btn-secondary">
+        <a href="{{ route('admin.categories.index') }}" class="btn btn-secondary">
             <i class="fas fa-arrow-left"></i> {{ __('Back to List') }}
         </a>
     </div>

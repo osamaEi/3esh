@@ -7,7 +7,7 @@
             <h2 class="mt-6 text-center">{{ __('Edit Category') }}</h2>
         </div>
         <div class="card-body">
-            <form action="{{ route('categories.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.categories.update', $category->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 

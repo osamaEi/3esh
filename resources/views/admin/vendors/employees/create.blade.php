@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h2>Add New Employee</h2>
-            <a href="{{ route('employees.index') }}" class="btn btn-secondary">Back to List</a>
+            <a href="{{ route('admin.employees.index') }}" class="btn btn-secondary">Back to List</a>
         </div>
         <div class="card-body">
             @if($errors->any())
@@ -18,7 +18,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('employees.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.employees.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 
                 <div class="row">

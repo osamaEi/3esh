@@ -29,7 +29,7 @@
                     @endif
 
 
-                    <form action="{{ route('settings.update', $setting->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.settings.update', $setting->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         
@@ -136,7 +136,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <form action="{{ route('settings.destroy', $setting->id) }}" method="POST">
+                <form action="{{ route('admin.settings.destroy', $setting->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>

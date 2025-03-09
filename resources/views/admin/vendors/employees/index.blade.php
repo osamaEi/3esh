@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h2>{{ __('Employees') }}</h2>
-            <a href="{{ route('employees.create') }}" class="btn btn-primary">{{ __('Add New Employee') }}</a>
+            <a href="{{ route('admin.employees.create') }}" class="btn btn-primary">{{ __('Add New Employee') }}</a>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -45,13 +45,13 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('employees.show', $employee->id) }}" class="btn btn-sm btn-info">
+                                    <a href="{{ route('admin.employees.show', $employee->id) }}" class="btn btn-sm btn-info">
                                         <i class="fas fa-eye"></i> {{ __('View') }}
                                     </a>
-                                    <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('admin.employees.edit', $employee->id) }}" class="btn btn-sm btn-primary">
                                         <i class="fas fa-edit"></i> {{ __('Edit') }}
                                     </a>
-                                    <form action="{{ route('employees.destroy', $employee->id) }}" method="POST" onsubmit="return confirm('{{ __('Are you sure you want to delete this employee?') }}');" class="d-inline">
+                                    <form action="{{ route('admin.employees.destroy', $employee->id) }}" method="POST" onsubmit="return confirm('{{ __('Are you sure you want to delete this employee?') }}');" class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">

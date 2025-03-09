@@ -25,7 +25,6 @@
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Photo') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Status') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Hours') }}</th>
-                            <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Notes') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Actions') }}</th>
                         </tr>
                     </thead>
@@ -61,7 +60,6 @@
                                 {{-- <td class="p-4 text-sm text-gray-600 border-b border-gray-200">
                                     {{ $branch->working_days ? implode(', ', json_decode($branch->working_days, true)) : 'N/A' }}
                                 </td> --}}
-                                <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ Str::limit($branch->notes ?? 'N/A', 20) }}</td>
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200 flex space-x-3">
                                     <a href="{{ route('vendors.branches.show', $branch->id) }}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-gray-700 transition duration-200 shadow-sm">
                                         <i class="fas fa-eye mr-1"></i> {{ __('View') }}

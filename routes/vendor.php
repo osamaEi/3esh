@@ -6,6 +6,7 @@ use App\Http\Controllers\Vendor\BranchController;
 use App\Http\Controllers\Vendor\EmployeeController;
 use App\Http\Controllers\Vendor\DashboardController;
 use App\Http\Controllers\Vendor\VendorRequestController;
+use App\Http\Controllers\Vendor\DiscountTransactionController;
 
 
 Route::group(['prefix' => 'vendors', 'as' => 'vendors.'], function () {
@@ -46,4 +47,10 @@ Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'v
     Route::get('/branches/{id}', [BranchController::class, 'show'])->name('branches.show');
     Route::get('/branches/{id}/edit', [BranchController::class, 'edit'])->name('branches.edit');
     Route::put('/branches/{id}', [BranchController::class, 'update'])->name('branches.update');
+});
+
+
+Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'vendors.'], function () {
+    Route::get('/discount-transactions', [DiscountTransactionController::class, 'index'])->name('discount-transactions.index');
+    Route::post('/discount-transactions/{transaction}/confirm', [DiscountTransactionController::class, 'confirm'])->name('discount-transactions.confirm');
 });

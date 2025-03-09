@@ -5,7 +5,7 @@
     <div class="card shadow-lg border-0 mt-4">
         <div class="card-header bg-warning text-white d-flex justify-content-between align-items-center">
             <h4><i class="fas fa-edit"></i> Edit Employee</h4>
-            <a href="{{ route('employees.index') }}" class="btn btn-light"><i class="fas fa-arrow-left"></i> Back to List</a>
+            <a href="{{ route('admin.employees.index') }}" class="btn btn-light"><i class="fas fa-arrow-left"></i> Back to List</a>
         </div>
 
         <div class="card-body">
@@ -19,7 +19,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('employees.update', $employee->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.employees.update', $employee->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
