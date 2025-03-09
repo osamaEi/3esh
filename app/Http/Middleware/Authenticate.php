@@ -17,7 +17,7 @@ class Authenticate extends Middleware
             if (str_starts_with($request->path(), 'admin')) {
                 return route('admin.login');
             } elseif (str_starts_with($request->path(), 'employee')) {
-                return route('employee.login');
+                return route('vendors.login');
             }
             
             // Fallback to default login route if you have one
