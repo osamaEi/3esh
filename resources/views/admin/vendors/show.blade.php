@@ -112,7 +112,7 @@
     </div>
 
     <div class="mt-4">
-        <a href="{{ route('vendors.index') }}" class="btn btn-secondary">
+        <a href="{{ route('admin.vendors.index') }}" class="btn btn-secondary">
             <i class="fas fa-arrow-left"></i> {{__('Back')}}
         </a>
     </div>

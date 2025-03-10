@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h2>Branches</h2>
+            <h2>{{__('Branches')}}</h2>
             <a href="{{ route('admin.branches.create') }}" class="btn btn-primary">{{__('Add New Branch')}}</a>
         </div>
         <div class="card-body">
@@ -24,7 +24,6 @@
                             <th>{{__('Address')}}</th>
                             <th>{{__('Phone')}}</th>
                             <th>{{__('Manager')}}</th>
-                            <th>{{__('Status')}}</th>
                             <th>{{__('Actions')}}</th>
                         </tr>
                     </thead>
@@ -44,11 +43,7 @@
                                         <span class="badge bg-danger">{{__('Inactive')}}</span>
                                     @endif
                                     
-                                    @if($branch->is_approved)
-                                        <span class="badge bg-info">{{__('Approved')}}</span>
-                                    @else
-                                        <span class="badge bg-warning">{{__('Pending')}}</span>
-                                    @endif
+                   
                                 </td>
                                 <td>
                                         <a href="{{ route('admin.branches.show', $branch->id) }}" class="btn btn-sm btn-info">

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h2>Add New Branch</h2>
+            <h2>{{__('Add New Branch')}}</h2>
             <a href="{{ route('admin.branches.index') }}" class="btn btn-secondary">{{__('Back to List')}}</a>
         </div>
         <div class="card-body">
@@ -137,7 +137,7 @@
                                     <div class="form-check me-3 mb-2">
                                         <input class="form-check-input" type="checkbox" name="working_days[]" id="day-{{ $loop->index }}" value="{{ $day }}" {{ is_array(old('working_days')) && in_array($day, old('working_days')) ? 'checked' : '' }}>
                                         <label class="form-check-label" for="day-{{ $loop->index }}">
-                                            {{ $day }}
+                                            {{ __($day) }}
                                         </label>
                                     </div>
                                 @endforeach
