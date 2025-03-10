@@ -3,9 +3,9 @@
 <section class="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center bg-white">
   <!-- Left Content -->
   <div class="md:w-1/2 mb-10 md:mb-0 pr-8">
-      <h1 class="text-5xl font-bold mb-6 text-black">Start Spending The Smart Way</h1>
+      <h1 class="text-5xl font-bold mb-6 text-black">{{__('Start Spending The Smart Way')}}</h1>
       <p class="text-lg mb-8 text-gray-700">
-          Take Control of Your Finances Anytime, Anywhere with live plus. Discover the Smart Way to Use Your Money!
+        {{__('Take Control of Your Finances Anytime, Anywhere with live plus. Discover the Smart Way to Use Your Money!')}}
       </p>
       <div class="flex space-x-4">
           <a href="#" class="flex items-center bg-black text-white px-4 py-2 rounded-lg">
@@ -13,8 +13,8 @@
                   <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
               </svg>
               <div>
-                  <div class="text-xs">Download on the</div>
-                  <div class="text-sm font-semibold">App Store</div>
+                  <div class="text-xs">{{__('Download on the')}}</div>
+                  <div class="text-sm font-semibold">{{__('App Store')}}</div>
               </div>
           </a>
           <a href="#" class="flex items-center bg-black text-white px-4 py-2 rounded-lg">
@@ -22,8 +22,8 @@
                   <path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
               </svg>
               <div>
-                  <div class="text-xs">GET IT ON</div>
-                  <div class="text-sm font-semibold">Google Play</div>
+                  <div class="text-xs">{{__('GET IT ON')}}</div>
+                  <div class="text-sm font-semibold">{{__('Google Play')}}</div>
               </div>
           </a>
       </div>
@@ -48,8 +48,8 @@
     <!-- Benefits Section -->
     <section class=" bg-white">
         <div class="container mx-auto px-4 text-center mb-12">
-            <h2 class="text-3xl font-bold mb-6">Make every penny count</h2>
-            <p class="text-lg text-gray-600">Spend smarter, lower your bills, get cashback on everything you buy.</p>
+            <h2 class="text-3xl font-bold mb-6">{{__('Make every penny count')}}</h2>
+            <p class="text-lg text-gray-600">{{__('Spend smarter, lower your bills, get cashback on everything you buy.')}}</p>
         </div>
     </section>
 
@@ -62,9 +62,9 @@
     <div class="flex flex-col md:flex-row">
       <!-- Left Content -->
       <div class="p-8 md:p-12 md:w-1/2 z-10">
-        <h2 class="text-3xl font-bold mb-4">Pay with Kobodrop, quick, simple and easy</h2>
+        <h2 class="text-3xl font-bold mb-4">{{__('Pay with Kobodrop, quick, simple and easy')}}</h2>
         <p class="text-gray-700">
-          Paying your bills on Kobodrop has never been easier. Whether you are paying for electricity or internet, Kobodrop gets it done within seconds.
+          {{__('Paying your bills on Kobodrop has never been easier. Whether you are paying for electricity or internet, Kobodrop gets it done within seconds.')}}
         </p>
       </div>
       
@@ -86,9 +86,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
         </div>
-        <h2 class="text-3xl font-bold mb-4 text-center">Data level security</h2>
+        <h2 class="text-3xl font-bold mb-4 text-center">{{__('Data level security')}}</h2>
         <p class="text-gray-700 text-center">
-            Your money is 100% safe and secure on Kobodrop. No hassles, no glitches, get access to your money anytime.
+          {{__('Your money is 100% safe and secure on Kobodrop. No hassles, no glitches, get access to your money anytime.')}}
         </p>
     </div>
 </section>
@@ -102,9 +102,9 @@
                 <img src="{{asset('photos/4.png')}}" alt="Credit Card Icon" class=" h-16">
               </div>
         
-        <h2 class="text-2xl font-bold mb-4">Greate offers</h2>
+        <h2 class="text-2xl font-bold mb-4">{{__('Greate offers')}}</h2>
         <p class="text-gray-700">
-          Kobodrop reduced payments maintenance and processing fees. No hidden fees
+          {{__('Kobodrop reduced payments maintenance and processing fees. No hidden fees')}}
         </p>
       </div>
       
@@ -112,9 +112,9 @@
       <div class="rounded-3xl p-8 md:w-2/3" style="background-color: #F3F6F8;">
         <div class="flex flex-col md:flex-row">
           <div class="md:w-1/2 mb-6 md:mb-0">
-            <h2 class="text-2xl font-bold mb-4">All payment methods are available.</h2>
+            <h2 class="text-2xl font-bold mb-4">{{__('All payment methods are available.')}}</h2>
             <p class="text-gray-700">
-              Transfers, payments all work on Kobodrop. Get your alert message immediately after a completed transaction.
+              {{__('Transfers, payments all work on Kobodrop. Get your alert message immediately after a completed transaction.')}}
             </p>
           </div>
           
@@ -148,8 +148,8 @@
       <!-- Features Content -->
       <div>
         <div class="mb-8">
-          <p class="uppercase text-sm text-indigo-700 tracking-wider font-semibold mb-2">FEATURES</p>
-          <h2 class="text-5xl font-bold mb-12 text-black">Check Out Our Benefits</h2>
+          <p class="uppercase text-sm text-indigo-700 tracking-wider font-semibold mb-2">{{__('FEATURES')}}</p>
+          <h2 class="text-5xl font-bold mb-12 text-black">{{__('Check Out Our Benefits')}}</h2>
           
           <!-- Feature 1 -->
           <div class="mb-10 bg-white">
@@ -159,9 +159,9 @@
                   <path d="M12 4L13.4328 8.2918H18L14.2836 10.9836L15.7164 15.2754L12 12.5836L8.28361 15.2754L9.71639 10.9836L6 8.2918H10.5672L12 4Z" fill="currentColor"/>
                 </svg>
               </div>
-              <h4 class="font-bold text-xl">Feature 1</h4>
+              <h4 class="font-bold text-xl">{{__('Feature 1')}}</h4>
             </div>
-            <p class="text-gray-600 pl-10">Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+            <p class="text-gray-600 pl-10">{{__('Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.')}}</p>
           </div>
           
           <!-- Feature 2 -->
@@ -174,9 +174,9 @@
                   <path d="M9 12L15 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h4 class="font-bold text-xl">Feature 2</h4>
+              <h4 class="font-bold text-xl">{{__('Feature 2')}}</h4>
             </div>
-            <p class="text-gray-600 pl-10">Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+            <p class="text-gray-600 pl-10">{{__('Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.')}}</p>
           </div>
           
           <!-- Feature 3 -->
@@ -188,9 +188,9 @@
                   <path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h4 class="font-bold text-xl">Feature 3</h4>
+              <h4 class="font-bold text-xl">{{__('Feature 3')}}</h4>
             </div>
-            <p class="text-gray-600 pl-10">Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.</p>
+            <p class="text-gray-600 pl-10">{{__('Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.')}}</p>
           </div>
         </div>
       </div>
@@ -203,10 +203,10 @@
       <div class="flex flex-col md:flex-row items-center">
         <!-- Left Content -->
         <div class="md:w-1/2 md:pr-12 mb-10 md:mb-0">
-          <p class="uppercase text-sm text-gray-500 tracking-wider font-semibold mb-2">ADVANTAGES</p>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Choose Live Plus?</h2>
+          <p class="uppercase text-sm text-gray-500 tracking-wider font-semibold mb-2">{{__('ADVANTAGES')}}</p>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">{{__('Why Choose Live Plus?')}}</h2>
           <p class="text-gray-600 mb-6">
-            Arcu At Dictum Sapien, Mollis. Vulputate Sit Id Accumsan, Ultricies. In Ultricies Malesuada Elit Mauris Etiam Quis. Duis Tristique Lectus. Et Blandit Viverra Nisl Velit. Sed Mattis Pharetra Dolor Suspendisse Sit. Nunc, Gravida Eu Lectus Eget Eget Ac Dolor Neque Lorem Sapien, Suspendisse Aliquam.
+            {{__('Arcu At Dictum Sapien, Mollis. Vulputate Sit Id Accumsan, Ultricies. In Ultricies Malesuada Elit Mauris Etiam Quis. Duis Tristique Lectus. Et Blandit Viverra Nisl Velit. Sed Mattis Pharetra Dolor Suspendisse Sit. Nunc, Gravida Eu Lectus Eget Eget Ac Dolor Neque Lorem Sapien, Suspendisse Aliquam.')}}
           </p>
         </div>
         
@@ -291,41 +291,41 @@
     <section class="py-16">
         <div class="container mx-auto">
             <div class="mb-8 max-w-4xl mx-auto">
-                <p class="uppercase text-sm text-gray-600 tracking-wider font-semibold mb-2">JOIN US</p>
-                <h2 class="text-4xl font-bold">Send Your Information To Join Us</h2>
+                <p class="uppercase text-sm text-gray-600 tracking-wider font-semibold mb-2">{{__('JOIN US')}}</p>
+                <h2 class="text-4xl font-bold">{{__('Send Your Information To Join Us')}}</h2>
             </div>
             
             <form class="max-w-4xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                        <input type="text" id="name" placeholder="Enter phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{__('Name')}}</label>
+                        <input type="text" id="name" placeholder="{{__('Enter phone number')}}" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                     </div>
                     
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                        <input type="email" id="email" placeholder="Enter Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{__('Email')}}</label>
+                        <input type="email" id="email" placeholder="{{__('Enter Email')}}" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                     </div>
                     
                     <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone number</label>
-                        <input type="tel" id="phone" placeholder="Enter phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">{{__('Phone number')}}</label>
+                        <input type="tel" id="phone" placeholder="{{__('Enter phone number')}}" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                     </div>
                     
                     <div>
-                        <label for="branches" class="block text-sm font-medium text-gray-700 mb-2">Number of branches</label>
-                        <input type="number" id="branches" placeholder="Enter Number of branches" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <label for="branches" class="block text-sm font-medium text-gray-700 mb-2">{{__('Number of branches')}}</label>
+                        <input type="number" id="branches" placeholder="{{__('Enter Number of branches')}}" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                     </div>
                 </div>
                 
                 <div class="mb-6">
-                    <label for="attachments" class="block text-sm font-medium text-gray-700 mb-2">Attachments for the commercial register</label>
+                    <label for="attachments" class="block text-sm font-medium text-gray-700 mb-2">{{__('Attachments for the commercial register')}}</label>
                     <div class="border border-dashed border-gray-300 rounded-lg p-12 text-center">
-                        <p class="text-gray-500">Please upload attachments for the commercial register</p>
+                        <p class="text-gray-500">{{__('Please upload attachments for the commercial register')}}</p>
                     </div>
                 </div>
                 
-                <button type="submit" class="bg-purple-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-800 transition duration-300">Send Now</button>
+                <button type="submit" class="bg-purple-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-800 transition duration-300">Send Now')}}</button>
             </form>
         </div>
     </section>

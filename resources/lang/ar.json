@@ -78,6 +78,30 @@
             "Created At": "تاريخ الإنشاء",
             "Updated At": "آخر تحديث",
             
+                "Create New Subscription Plan": "إنشاء خطة اشتراك جديدة",
+                "Name": "الاسم",
+                "Price": "السعر",
+                "Duration": "المدة",
+                "Features": "المميزات",
+                "Photo": "الصورة",
+                "Status": "الحالة",
+                "Active": "نشط",
+                "Inactive": "غير نشط",
+                "Create": "إنشاء",
+                "Subscription Plans": "خطط الاشتراك",                
+                    "Edit Subscription Plan": "تعديل خطة الاشتراك",
+                    "Name": "الاسم",
+                    "Price": "السعر",
+                    "Duration (Days)": "المدة (بالأيام)",
+                    "Features": "المميزات",
+                    "Photo": "الصورة",
+                    "Status": "الحالة",
+                    "Active": "نشط",
+                    "Inactive": "غير نشط",
+                    "Update": "تحديث",
+                
+                
+            
                 "Create New Category": "إنشاء فئة جديدة",
                 "Name": "الاسم",
                 "Description": "الوصف",
@@ -114,31 +138,22 @@
         "Image Setting Value": "قيمة إعداد الصورة",
         "Download Image": "تحميل الصورة",
         "Confirm Delete": "تأكيد الحذف",
-        "Are you sure you want to delete the setting": "هل أنت متأكد أنك تريد حذف الإعداد",
-        "This action cannot be undone!": "لا يمكن التراجع عن هذا الإجراء!",
-        "Cancel": "إلغاء",
-        "Delete": "حذف",
+       
         "Edit Setting": "تعديل الإعداد",
-        "Setting Key": "مفتاح الإعداد",
+       
         "Value Type": "نوع القيمة",
-        "Text": "نص",
-        "Image": "صورة",
-        "Setting Value": "قيمة الإعداد",
+       
         "Current Image": "الصورة الحالية",
-        "Remove": "إزالة",
         "Update Setting": "تحديث الإعداد",
-        "Delete": "حذف",
-        "Confirm Delete": "تأكيد الحذف",
+       
         "Are you sure you want to delete the setting": "هل أنت متأكد أنك تريد حذف الإعداد",
         "This action cannot be undone!": "لا يمكن التراجع عن هذا الإجراء!",
         "Cancel": "إلغاء",
-        "Error!": "خطأ!",
+       
         
             "Create New Setting": "إنشاء إعداد جديد",
             "Setting Key": "مفتاح الإعداد",
-            "Value": "القيمة",
-            "Text": "نص",
-            "Image": "صورة",
+          
             "Setting Value": "قيمة الإعداد",
             "Setting": "الإعداد",
             "Remove": "إزالة",
@@ -147,85 +162,34 @@
             "Enter a unique key (e.g., site_title, mail_driver)": "أدخل مفتاحًا فريدًا (مثل: site_title، mail_driver)",
             "Enter the setting value": "أدخل قيمة الإعداد",
             "Error!": "خطأ!",
-            "Close": "إغلاق",
+          
             
                 "Create Vendor": "إنشاء بائع",
-                "Logo": "الشعار",
-                "Business Name": "اسم العمل",
-                "Status": "الحالة",
-                "Actions": "الإجراءات",
-                "Blocked": "محظور",
-                "Approved": "مُعتمد",
-                "Pending": "قيد الانتظار",
-                "View": "عرض",
-                "Edit": "تعديل",
-                "Delete": "حذف",
+               
                 "Approve": "اعتماد",
-                "Block": "حظر",
-                "Unblock": "إلغاء الحظر",
+               
                 "Are you sure?": "هل أنت متأكد؟",
                 
-                    "Business Name": "اسم النشاط التجاري",
-                    "Email": "البريد الإلكتروني",
-                    "Logo": "الشعار",
-                    "Categories": "الفئات",
-                    "Contact Person": "الشخص المسؤول",
-                    "Create": "إنشاء",
+                  
                     
                         "Vendor Details": "تفاصيل البائع",
-                        "Business Name": "اسم النشاط التجاري",
-                        "Email": "البريد الإلكتروني",
-                        "Contact Person": "الشخص المسؤول",
-                        "Status": "الحالة",
-                        "Blocked": "محظور",
-                        "Approved": "موافَق عليه",
-                        "Pending": "قيد الانتظار",
-                        "Branches": "الفروع",
+                      
                         "Add Branch": "إضافة فرع",
                         "Add Employee": "إضافة موظف",
-                        "ID": "المعرف",
-                        "Name": "الاسم",
-                        "Address": "العنوان",
-                        "Phone": "الهاتف",
-                        "Manager": "المدير",
-                        "Active": "نشط",
-                        "Inactive": "غير نشط",
-                        "Actions": "الإجراءات",
+                      
                         "Are you sure you want to delete this branch?": "هل أنت متأكد أنك تريد حذف هذا الفرع؟",
                         "No branches found for this vendor.": "لم يتم العثور على فروع لهذا البائع.",
                         "Back": "رجوع",
                         
                             "Business Name": "اسم النشاط التجاري",
-                            "Email": "البريد الإلكتروني",
+                            
                             "Logo": "الشعار",
-                            "Categories": "الفئات",
+                        
                             "Contact Person": "الشخص المسؤول",
-                            "Update": "تحديث",
+                        
                             
                                 "Add New Branch": "إضافة فرع جديد",
-                                "Back to List": "العودة إلى القائمة",
-                                "Vendor": "البائع",
-                                "Branch Name": "اسم الفرع",
-                                "Address": "العنوان",
-                                "Latitude": "خط العرض",
-                                "Longitude": "خط الطول",
-                                "Phone": "الهاتف",
-                                "Email": "البريد الإلكتروني",
-                                "Manager Name": "اسم المدير",
-                                "Branch Photo": "صورة الفرع",
-                                "Opening Time": "وقت الفتح",
-                                "Closing Time": "وقت الإغلاق",
-                                "Working Days": "أيام العمل",
-                                "Monday": "الاثنين",
-                                "Tuesday": "الثلاثاء",
-                                "Wednesday": "الأربعاء",
-                                "Thursday": "الخميس",
-                                "Friday": "الجمعة",
-                                "Saturday": "السبت",
-                                "Sunday": "الأحد",
-                                "Notes": "ملاحظات",
-                                "Approved": "موافق عليه",
-                                "Active": "نشط",
+                              
                                 "Create Branch": "إنشاء فرع",
                                 
                                     "Edit Branch": "تعديل الفرع",
@@ -304,32 +268,39 @@
                                             "Delete": "حذف",
                                             "Are you sure you want to delete this employee?": "هل أنت متأكد أنك تريد حذف هذا الموظف؟",
                                             "No employees found.": "لم يتم العثور على موظفين.",
-                                            
-                                                "Add New Employee": "إضافة موظف جديد",
-                                                "Back to List": "العودة إلى القائمة",
-                                                "Full Name": "الاسم الكامل",
-                                                "Email": "البريد الإلكتروني",
-                                                "Phone": "الهاتف",
-                                                "Vendor": "المورد",
+                                            "Sign In": "تسجيل الدخول",
+    "Welcome Back!": "مرحبًا بعودتك!",
+    "Email": "البريد الإلكتروني",
+    "Password": "كلمة المرور",
+    "Remember me": "تذكرني",
+    "Log In": "تسجيل الدخول",
+    "Not a Member yet?": "لست عضوًا بعد؟",
+    "Sign up": "اشترك",
+    "Developed By": "تم التطوير بواسطة",
+    "All Rights Reserved": "جميع الحقوق محفوظة",
+                                           
                                                 "Select a Vendor": "اختر مورداً",
                                                 "Profile Photo": "الصورة الشخصية",
-                                                "Position": "المنصب",
                                                 "Password": "كلمة المرور",
                                                 "Confirm Password": "تأكيد كلمة المرور",
                                                 "Create Employee": "إنشاء موظف",
                                                 "JPG, JPEG, PNG, max 2MB": "JPG، JPEG، PNG، الحد الأقصى 2MB",
                                                 
                                                     "Edit Employee": "تعديل الموظف",
-                                                    "Back to List": "العودة إلى القائمة",
-                                                    "Full Name": "الاسم الكامل",
-                                                    "Email": "البريد الإلكتروني",
-                                                    "Phone": "رقم الهاتف",
+                                                 
                                                     "Password (Leave blank to keep current)": "كلمة المرور (اتركها فارغة للحفاظ على الحالية)",
-                                                    "Vendor": "البائع",
-                                                    "Select Vendor": "اختر البائع",
-                                                    "Position": "المنصب",
-                                                    "Profile Photo": "صورة الملف الشخصي",
-                                                    "Save Changes": "حفظ التغييرات"
+                                                  
+                                                    "Save Changes": "حفظ التغييرات",
+                                                    
+                                                        "My Profile": "ملفي الشخصي",
+                                                        "Notifications": "الإشعارات",
+                                                        "Mode": "الوضع",
+                                                        "Light": "فاتح",
+                                                        "Dark": "داكن",
+                                                        "System": "النظام",
+                                                        "Sign Out": "تسجيل الخروج"
+                                                    
+                                                    
                                                 
                                                 
                                             

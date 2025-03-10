@@ -55,9 +55,9 @@
                                 <!-- Header -->
                                 <div class="text-center mb-11 animate__animated animate__fadeInDown">
                                     <h1 class="text-4xl font-extrabold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-                                        Sign In
+                                        {{__('Sign In')}}
                                     </h1>
-                                    <div class="text-gray-500 fw-semibold fs-6 mt-2">Welcome Back!</div>
+                                    <div class="text-gray-500 fw-semibold fs-6 mt-2">{{__('Welcome Back!')}}</div>
                                 </div>
 
                                 <!-- Separator -->
@@ -67,14 +67,14 @@
 
                                 <!-- Email Input -->
                                 <div class="fv-row mb-8">
-                                    <input type="email" placeholder="Email" name="email" id="email" value="{{ old('email') }}" required autofocus autocomplete="username" 
+                                    <input type="email" placeholder="{{__('Email')}}" name="email" id="email" value="{{ old('email') }}" required autofocus autocomplete="username" 
                                            class="form-control bg-transparent border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent rounded-lg px-4 py-3 transition duration-300 shadow-sm hover:shadow-md" />
                                     <x-input-error :messages="$errors->get('email')" class="mt-2 text-red-500 text-sm" />
                                 </div>
 
                                 <!-- Password Input -->
                                 <div class="fv-row mb-8">
-                                    <input type="password" placeholder="Password" name="password" id="password" required autocomplete="current-password" 
+                                    <input type="password" placeholder="{{__('Password')}}" name="password" id="password" required autocomplete="current-password" 
                                            class="form-control bg-transparent border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent rounded-lg px-4 py-3 transition duration-300 shadow-sm hover:shadow-md" />
                                     <x-input-error :messages="$errors->get('password')" class="mt-2 text-red-500 text-sm" />
                                 </div>
@@ -84,21 +84,21 @@
                                     <label for="remember_me" class="inline-flex items-center cursor-pointer">
                                         <input id="remember_me" type="checkbox" name="remember" 
                                                class="rounded border-gray-300 text-purple-600 shadow-sm focus:ring-purple-500 h-5 w-5 transition duration-200" />
-                                        <span class="ms-2 text-sm text-gray-600 hover:text-purple-600 transition-colors duration-200">Remember me</span>
+                                        <span class="ms-2 text-sm text-gray-600 hover:text-purple-600 transition-colors duration-200"> {{__('Remember me')}}</span>
                                     </label>
                                 </div>
 
                                 <!-- Submit Button -->
                                 <div class="d-grid mb-10">
                                     <button type="submit" class="btn btn-primary bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold py-3 rounded-lg shadow-md hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-1">
-                                        Log In
+                                        {{__('Log In')}}
                                     </button>
                                 </div>
 
                                 <!-- Sign Up Link -->
                                 <div class="text-gray-500 text-center fw-semibold fs-6 animate__animated animate__fadeInUp">
-                                    Not a Member yet? 
-                                    <a href="{{ route('admin.register.view') }}" class="link-primary text-purple-600 hover:text-purple-800 transition-colors duration-200">Sign up</a>
+                                    {{__('Not a Member yet?')}}
+                                    <a href="{{ route('admin.register.view') }}" class="link-primary text-purple-600 hover:text-purple-800 transition-colors duration-200"> {{__('Sign up')}}</a>
                                 </div>
                             </form>
                         </div>
@@ -108,9 +108,9 @@
                             <div class="d-flex flex-column align-items-center">
                                 <div class="d-flex align-items-center">
                                     <h3 class="text-gray-400 fw-semibold fs-7">
-                                        Developed By 
+                                        {{__('Developed By')}} 
                                         <img src="{{ asset('assets/footer_logo.png') }}" alt="Footer Logo" class="inline-block h-5 mx-1" />
-                                        All Rights Reserved
+                                        {{__('All Rights Reserved')}}
                                     </h3>
                                 </div>
                             </div>

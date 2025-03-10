@@ -20,4 +20,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');
+Route::get('/lang/{lang}', [LanguageController::class, 'switch'])->name('lang.switch');

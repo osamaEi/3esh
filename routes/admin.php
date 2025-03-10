@@ -12,7 +12,8 @@ use App\Http\Controllers\Admin\SubscriptionController;
 use App\Http\Controllers\Admin\Auth\RegisterController;
 use App\Http\Controllers\Admin\Auth\DashboardController;
 
-// Guest routes (accessible only when not logged in)
+
+Route::group(['middleware' => 'setlocale'], function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'guest:admin'], function () {
     Route::get('/register', [RegisterController::class, 'adminRegisterView'])->name('admin.register.view');
     Route::post('/register', [RegisterController::class, 'adminRegister'])->name('admin.register');
@@ -78,4 +79,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin', 'as' => 'admin.
     Route::post('/users/{user_id}/attach-subscription', [UserController::class, 'attachSubscription'])->name('users.attachSubscription');
     
     Route::resource('subscriptions', SubscriptionController::class);
+});
+
 });

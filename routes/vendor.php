@@ -8,6 +8,7 @@ use App\Http\Controllers\Vendor\DashboardController;
 use App\Http\Controllers\Vendor\VendorRequestController;
 use App\Http\Controllers\Vendor\DiscountTransactionController;
 
+Route::group(['middleware' => 'setlocale'], function () {
 
 Route::group(['prefix' => 'vendors', 'as' => 'vendors.'], function () {
 
@@ -53,4 +54,6 @@ Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'v
 Route::group(['prefix' => 'vendors', 'middleware' => 'auth:employee', 'as' => 'vendors.'], function () {
     Route::get('/discount-transactions', [DiscountTransactionController::class, 'index'])->name('discount-transactions.index');
     Route::post('/discount-transactions/{transaction}/confirm', [DiscountTransactionController::class, 'confirm'])->name('discount-transactions.confirm');
+});
+
 });

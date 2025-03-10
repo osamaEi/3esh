@@ -4,10 +4,10 @@
         <!-- Header -->
         <div class="flex justify-between items-center mb-8">
             <h2 class="text-3xl font-extrabold text-gray-800 flex items-center">
-                <i class="fas fa-ticket-alt mr-3 text-purple-600"></i> Discount Transactions
+                <i class="fas fa-ticket-alt mr-3 text-purple-600"></i> {{__('Discount Transactions')}}
             </h2>
             <a href="{{ route('vendors.dashboard') }}" class="inline-flex items-center px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
-                <i class="fas fa-arrow-left mr-2"></i> Back to Dashboard
+                <i class="fas fa-arrow-left mr-2"></i> {{__('Back to Dashboard')}}
             </a>
         </div>
 
@@ -51,7 +51,7 @@
                                         @csrf
                                         <input type="text" name="confirmation_code" value="{{ old('confirmation_code') }}" class="px-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 w-32" placeholder="Enter code" required>
                                         <button type="submit" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition duration-200 shadow-sm">
-                                            <i class="fas fa-check mr-1"></i> Confirm
+                                            <i class="fas fa-check mr-1"></i> {{__('Confirm')}}
                                         </button>
                                     </form>
                                 </td>

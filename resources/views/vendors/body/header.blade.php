@@ -22,10 +22,10 @@
                 <img src="{{asset('photos/logo.png')}}" alt="Live Plus Logo" class="h-15 w-15 p-1">
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="{{ url('/') }}" class="text-gray-700 hover:text-purple-700">Home</a>
-                <a href="{{ url('/learn') }}" class="text-gray-700 hover:text-purple-700">Learn</a>
-                <a href="{{ url('/faqs') }}" class="text-gray-700 hover:text-purple-700">FAQs</a>
-                <a href="{{ url('/join') }}" class="text-gray-700 hover:text-purple-700">Join us</a>
+                <a href="{{ url('/') }}" class="text-gray-700 hover:text-purple-700">{{__('Home')}}</a>
+                <a href="{{ url('/learn') }}" class="text-gray-700 hover:text-purple-700">{{__('Learn')}}</a>
+                <a href="{{ url('/faqs') }}" class="text-gray-700 hover:text-purple-700">{{__('FAQs')}}</a>
+                <a href="{{ route('vendors.register') }}" class="text-gray-700 hover:text-purple-700">{{__('Join us')}}</a>
             </nav>
             <a href="{{ url('/install') }}" class="bg-purple-700 text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition duration-300">Install App</a>
         </div>
