@@ -44,7 +44,7 @@
 
                                     <!-- Contact Person -->
                                     <div>
-                                        <label for="contact_person" class="block text-sm font-medium text-gray-700">Contact Person')}}</label>
+                                        <label for="contact_person" class="block text-sm font-medium text-gray-700">{{__('Contact Person')}}</label>
                                         <input type="text" name="contact_person" id="contact_person" value="{{ old('contact_person') }}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                         <p class="mt-1 text-xs text-red-600 hidden" id="contact_person-error"></p>
                                         @error('contact_person')

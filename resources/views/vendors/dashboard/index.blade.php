@@ -4,7 +4,7 @@
         <!-- Header with Gradient and Animation -->
         <div class="relative mb-10">
             <h2 class="text-4xl font-extrabold text-gray-800 flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text animate-pulse">
-                <i class="fas fa-tachometer-alt mr-4 text-purple-600"></i> Vendor Dashboard')}}
+                <i class="fas fa-tachometer-alt mr-4 text-purple-600"></i> {{__('Vendor Dashboard')}}
             </h2>
             <div class="absolute inset-0 -z-10 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full opacity-50 blur-md"></div>
         </div>

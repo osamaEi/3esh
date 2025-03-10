@@ -127,7 +127,7 @@
                 <!-- Opening Time -->
                 <div>
                     <label for="opening_time" class="block text-sm font-medium text-gray-700 mb-1">
-                        <i class="fas fa-clock mr-1 text-purple-500"></i> {{__('Opening Time (HH:MM)')}}
+                        <i class="fas fa-clock mr-1 text-purple-500"></i> {{__('Opening Time')}}
                     </label>
                     <input type="time" id="opening_time" name="opening_time" value="{{ old('opening_time') }}" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200">
                     @error('opening_time')
@@ -138,7 +138,7 @@
                 <!-- Closing Time -->
                 <div>
                     <label for="closing_time" class="block text-sm font-medium text-gray-700 mb-1">
-                        <i class="fas fa-clock mr-1 text-purple-500"></i> {{__('Closing Time (HH:MM)')}}
+                        <i class="fas fa-clock mr-1 text-purple-500"></i> {{__('Closing Time')}}
                     </label>
                     <input type="time" id="closing_time" name="closing_time" value="{{ old('closing_time') }}" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200">
                     @error('closing_time')
@@ -155,7 +155,7 @@
                         @foreach (['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as $day)
                             <label class="flex items-center">
                                 <input type="checkbox" name="working_days[]" value="{{ $day }}" {{ in_array($day, old('working_days', [])) ? 'checked' : '' }} class="mr-2 text-purple-500 focus:ring-purple-500">
-                                <span class="text-sm text-gray-600">{{ $day }}</span>
+                                <span class="text-sm text-gray-600">{{ __($day) }}</span>
                             </label>
                         @endforeach
                     </div>
@@ -178,7 +178,7 @@
                 <!-- Submit Button -->
                 <div class="flex justify-end">
                     <button type="submit" class="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition duration-300 transform hover:-translate-y-1">
-                        <i class="fas fa-save mr-2"></i> {{__('Save Branch')}}
+                        <i class="fas fa-save mr-2"></i> {{__('Create')}}
                     </button>
                 </div>
             </form>
