@@ -8,11 +8,11 @@
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item">
                     <a href="{{ route('admin.dashboard') }}" class="text-decoration-none">
-                        <i class="fas fa-home"></i> Dashboard
+                        <i class="fas fa-home"></i> {{__('Dashboard')}}
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <i class="fas fa-folder"></i> Categories
+                    <i class="fas fa-folder"></i> {{__('Categories')}}
                 </li>
             </ol>
         </nav>
@@ -36,9 +36,9 @@
                 <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">
                     <i class="fas fa-plus me-1"></i> {{ __('Create New') }}
                 </a>
-                <a href="{{ route('admin.categories.tree') }}" class="btn btn-info ms-2">
+                {{-- <a href="{{ route('admin.categories.tree') }}" class="btn btn-info ms-2">
                     <i class="fas fa-sitemap me-1"></i> {{ __('View Tree') }}
-                </a>
+                </a> --}}
             </div>
         </div>
         <div class="card-body p-0">

@@ -37,11 +37,15 @@
                         <option value="0">{{ __('Inactive') }}</option>
                     </select>
                 </div>
-
                 <div class="mb-3">
                     <label for="photo" class="form-label">{{ __('Photo') }}</label>
-                    <input type="file" name="photo" id="photo" class="form-control">
+                    <div class="custom-file">
+                        <input type="file" name="photo" id="photo" class="custom-file-input d-none" onchange="updateFileName(this)">
+                        <label for="photo" class="btn btn-primary">{{ __('Choose File') }}</label>
+                        <span id="file-name" class="ms-2">{{ __('No file chosen') }}</span>
+                    </div>
                 </div>
+                
 
                 <div class="d-grid">
                     <button type="submit" class="btn btn-success">
@@ -52,4 +56,11 @@
         </div>
     </div>
 </div>
+<script>
+    function updateFileName(input) {
+        let fileName = input.files.length > 0 ? input.files[0].name : "{{ __('No file chosen') }}";
+        document.getElementById('file-name').textContent = fileName;
+    }
+</script>
+
 @endsection

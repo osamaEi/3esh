@@ -1,50 +1,50 @@
 @include('vendors.body.header')
 <!-- Hero Section with Two Photos on Right -->
 <section class="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center bg-white">
-    <!-- Left Content -->
-    <div class="md:w-1/2 mb-10 md:mb-0 pr-8">
+  <!-- Left Content -->
+  <div class="md:w-1/2 mb-10 md:mb-0 pr-8">
       <h1 class="text-5xl font-bold mb-6 text-black">Start Spending The Smart Way</h1>
       <p class="text-lg mb-8 text-gray-700">
-        Take Control of Your Finances Anytime, Anywhere with live plus. Discover the Smart Way to Use Your Money!
+          Take Control of Your Finances Anytime, Anywhere with live plus. Discover the Smart Way to Use Your Money!
       </p>
       <div class="flex space-x-4">
-        <a href="#" class="flex items-center bg-black text-white px-4 py-2 rounded-lg">
-          <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-            <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
-          </svg>
-          <div>
-            <div class="text-xs">Download on the</div>
-            <div class="text-sm font-semibold">App Store</div>
-          </div>
-        </a>
-        <a href="#" class="flex items-center bg-black text-white px-4 py-2 rounded-lg">
-          <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
-          </svg>
-          <div>
-            <div class="text-xs">GET IT ON</div>
-            <div class="text-sm font-semibold">Google Play</div>
-          </div>
-        </a>
+          <a href="#" class="flex items-center bg-black text-white px-4 py-2 rounded-lg">
+              <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+              </svg>
+              <div>
+                  <div class="text-xs">Download on the</div>
+                  <div class="text-sm font-semibold">App Store</div>
+              </div>
+          </a>
+          <a href="#" class="flex items-center bg-black text-white px-4 py-2 rounded-lg">
+              <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+              </svg>
+              <div>
+                  <div class="text-xs">GET IT ON</div>
+                  <div class="text-sm font-semibold">Google Play</div>
+              </div>
+          </a>
       </div>
-    </div>
-    
-    <!-- Right Images - Two Photos Side by Side -->
-    <div class="md:w-1/2 flex relative">
+  </div>
+  
+  <!-- Right Images - Two Photos Side by Side -->
+  <div class="md:w-1/2 flex relative">
       <!-- Background purple rectangle -->
-      <div class="absolute inset-0  rounded-3xl"></div>
+      <div class="absolute inset-0 bg-purple-200 rounded-3xl opacity-50"></div>
       
       <!-- Left Phone UI Image -->
-      <div class="relative z-10 w-1/3 -mr-4 self-center">
-        <img src="{{asset('photos/1.png')}}" alt="App Interface" class="w-full h-auto">
+      <div class="relative z-10 w-1/3 -mr-4 self-center" style="width:300px;">
+          <img src="{{ asset('photos/1.png') }}" alt="App Interface" class="w-full h-auto">
       </div>
       
       <!-- Right Woman Image -->
       <div class="relative z-0 w-3/4">
-        <img src="" alt="Woman using app" class="w-full h-auto">
+          <img src="{{ asset('photos/woman.jpg') }}" alt="Woman using app" class="w-full h-auto">
       </div>
-    </div>
-  </section>
+  </div>
+</section>
     <!-- Benefits Section -->
     <section class=" bg-white">
         <div class="container mx-auto px-4 text-center mb-12">
@@ -136,11 +136,11 @@
 <section class="bg-white">
     <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       <!-- Mobile App Image with Design Elements -->
-      <div class="relative">
+      <div class="relative" style="height: 471px;">
         <!-- Lines graphic around the phone -->
-        <div class="absolute inset-0 w-85 h-100">
+        {{-- <div class="absolute inset-0 w-85 h-100">
           <img src="{{asset('photos/6.png')}}" alt="Design Lines" class="w-full h-full object-contain">
-        </div>
+        </div> --}}
         <!-- Phone Image -->
         <img src="{{asset('photos/5.png')}}" alt="Store Details Feature" class="relative z-10 mx-auto">
       </div>
@@ -214,9 +214,9 @@
         <div class="md:w-1/2 relative">
             <div class="relative">
                 <!-- Lines graphic around the phone -->
-                <div class="absolute inset-0 w-full h-full">
+                {{-- <div class="absolute inset-0 w-full h-full">
                   <img src="{{asset('photos/6.png')}}" alt="Design Lines" class="w-full h-full object-contain">
-                </div>
+                </div> --}}
                 <!-- Phone Image -->
                 <img src="{{asset('photos/5.png')}}" alt="Store Details Feature" class="relative z-10 mx-auto">
               </div>

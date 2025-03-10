@@ -41,7 +41,7 @@
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
 
                                     </span>
-                                    <span class="menu-title">{{ __('Dashbaoard')}}</span>
+                                    <span class="menu-title">{{ __('Dashboard')}}</span>
 
                                 </a>
                             
@@ -147,7 +147,7 @@
                                         <i class="fas fa-list-alt"></i> <!-- Categories icon -->
 
                                     </span>
-                                    <span class="menu-title">{{ __('Susbscription')}}</span>
+                                    <span class="menu-title">{{ __('Subscription')}}</span>
 
                                 </a>
                             

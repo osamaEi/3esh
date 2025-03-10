@@ -28,21 +28,21 @@
 <div class="container-fluid px-4 py-5">
     <div class="row g-3 mb-4 align-items-center justify-content-between">
         <div class="col-auto">
-            <h1 class="app-page-title mb-0">Dashboard Overview</h1>
+            <h1 class="app-page-title mb-0">{{__('Dashboard Overview')}}</h1>
         </div>
         <div class="col-auto">
             <div class="page-utilities">
                 <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
                     <div class="col-auto">
                         <select class="form-select">
-                            <option selected value="option-1">Today</option>
-                            <option value="option-2">This Week</option>
-                            <option value="option-3">This Month</option>
-                            <option value="option-4">This Quarter</option>
+                            <option selected value="option-1">{{__('Today')}}</option>
+                            <option value="option-2">{{__('This Week')}}</option>
+                            <option value="option-3">{{__('This Month')}}</option>
+                            <option value="option-4">{{__('This Quarter')}}</option>
                         </select>
                     </div>
                     <div class="col-auto">
-                        <a class="btn btn-primary" href="#"><i class="fas fa-file-download me-2"></i>Download Report</a>
+                        <a class="btn btn-primary" href="#"><i class="fas fa-file-download me-2"></i>{{__('Download Report')}}</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="card h-100 shadow-sm border-0">
                 <div class="card-body p-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h4 class="card-title text-muted m-0">Vendors</h4>
+                        <h4 class="card-title text-muted m-0">{{__('Vendors')}}</h4>
                         <div class="icon-shape rounded-circle bg-primary-subtle p-3">
                             <i class="fas fa-store fa-fw text-primary fs-4"></i>
                         </div>
@@ -66,7 +66,7 @@
                         <span class="badge bg-success-subtle text-success me-2">
                             <i class="fas fa-arrow-up me-1"></i>{{ $vendorGrowth }}%
                         </span>
-                        <span class="text-muted small">since last month</span>
+                        <span class="text-muted small">{{__('since last month')}}</span>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <div class="card h-100 shadow-sm border-0">
                 <div class="card-body p-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h4 class="card-title text-muted m-0">Users</h4>
+                        <h4 class="card-title text-muted m-0">{{__('Users')}}</h4>
                         <div class="icon-shape rounded-circle bg-success-subtle p-3">
                             <i class="fas fa-users fa-fw text-success fs-4"></i>
                         </div>
@@ -87,7 +87,7 @@
                         <span class="badge bg-success-subtle text-success me-2">
                             <i class="fas fa-arrow-up me-1"></i>{{ $userGrowth }}%
                         </span>
-                        <span class="text-muted small">since last month</span>
+                        <span class="text-muted small">{{__('since last month')}}</span>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
             <div class="card h-100 shadow-sm border-0">
                 <div class="card-body p-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h4 class="card-title text-muted m-0">Subscriptions</h4>
+                        <h4 class="card-title text-muted m-0">{{__('Subscriptions')}}</h4>
                         <div class="icon-shape rounded-circle bg-info-subtle p-3">
                             <i class="fas fa-repeat fa-fw text-info fs-4"></i>
                         </div>
@@ -108,7 +108,7 @@
                         <span class="badge bg-success-subtle text-success me-2">
                             <i class="fas fa-arrow-up me-1"></i>{{ $subscriptionGrowth }}%
                         </span>
-                        <span class="text-muted small">since last month</span>
+                        <span class="text-muted small">{{__('since last month')}}</span>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
             <div class="card h-100 shadow-sm border-0">
                 <div class="card-body p-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h4 class="card-title text-muted m-0">Categories</h4>
+                        <h4 class="card-title text-muted m-0">{{__('Categories')}}</h4>
                         <div class="icon-shape rounded-circle bg-warning-subtle p-3">
                             <i class="fas fa-tags fa-fw text-warning fs-4"></i>
                         </div>
@@ -129,7 +129,7 @@
                         <span class="badge bg-success-subtle text-success me-2">
                             <i class="fas fa-arrow-up me-1"></i>{{ $categoryGrowth }}%
                         </span>
-                        <span class="text-muted small">since last month</span>
+                        <span class="text-muted small">{{__('since last month')}}</span>
                     </div>
                 </div>
             </div>

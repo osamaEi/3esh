@@ -58,7 +58,7 @@ class CategoryController extends Controller
     {
         $this->categoryRepository->create($request->validated());
         
-        return redirect()->route('categories.index')
+        return redirect()->route('admin.categories.index')
                         ->with('success', __('Category created successfully'));
     }
     

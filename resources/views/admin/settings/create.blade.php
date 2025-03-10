@@ -28,7 +28,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('settings.store') }}" method="POST" id="settingForm" enctype="multipart/form-data">
+                    <form action="{{ route('admin.settings.store') }}" method="POST" id="settingForm" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-4">
                             <label for="key" class="form-label fw-bold">{{__('Setting Key')}} <span class="text-danger">*</span></label>

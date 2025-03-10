@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LanguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ require __DIR__.'/vendor.php';
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lang/{locale}', [LanguageController::class, 'switch'])->name('lang.switch');

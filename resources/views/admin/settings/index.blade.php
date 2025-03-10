@@ -85,7 +85,7 @@
                                 </td>
                                 <td class="text-center">
                                         <a href="{{ route('admin.settings.edit', $setting->id) }}" class="btn btn-sm btn-primary">
-                                            <i class="fas fa-edit"></i> Edit
+                                            <i class="fas fa-edit"></i>{{__('Edit')}}
                                         </a>
                                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" 
                                                 data-bs-target="#deleteModal" data-id="{{ $setting->id }}" 

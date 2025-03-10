@@ -55,8 +55,104 @@
                         </div>
 
 
-
-                     
+                        <div class="language-switcher">
+                            <div class="language-options">
+                              <a href="{{ route('lang.switch', 'en') }}" class="language-option {{ Session::get('locale') === 'en' ? 'active' : '' }}">
+                                <span class="language-flag">🇺🇸</span>
+                                <span class="language-name">English</span>
+                              </a>
+                              <div class="language-divider"></div>
+                              <a href="{{ route('lang.switch', 'ar') }}" class="language-option {{ Session::get('locale') === 'ar' ? 'active' : '' }}">
+                                <span class="language-flag">🇦🇪</span>
+                                <span class="language-name">العربية</span>
+                              </a>
+                            </div>
+                          </div>
+                          
+                          <style>
+                          .language-switcher {
+                            display: flex;
+                            justify-content: center;
+                            padding: 12px;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                          }
+                          
+                          .language-options {
+                            display: flex;
+                            align-items: center;
+                            background: rgba(12, 123, 226, 0.1);
+                            backdrop-filter: blur(10px);
+                            border-radius: 20px;
+                            padding: 8px 16px;
+                            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                            border: 1px solid rgba(23, 43, 219, 0.2);
+                            transition: all 0.3s ease;
+                          }
+                          
+                          .language-options:hover {
+                            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+                            transform: translateY(-2px);
+                          }
+                          
+                          .language-option {
+                            display: flex;
+                            align-items: center;
+                            padding: 10px 16px;
+                            color: #333;
+                            text-decoration: none;
+                            font-weight: 500;
+                            transition: all 0.3s ease;
+                            border-radius: 14px;
+                          }
+                          
+                          .language-option:hover {
+                            background: rgba(40, 102, 218, 0.2);
+                          }
+                          
+                          .language-option.active {
+                            background: rgba(43, 109, 185, 0.3);
+                            font-weight: 700;
+                            color: #000;
+                          }
+                          
+                          .language-flag {
+                            font-size: 1.4em;
+                            margin-right: 8px;
+                          }
+                          
+                          .language-name {
+                            font-size: 14px;
+                            letter-spacing: 0.5px;
+                          }
+                          
+                          .language-divider {
+                            height: 24px;
+                            width: 1px;
+                            background: rgba(0, 0, 0, 0.1);
+                            margin: 0 8px;
+                          }
+                          
+                          /* Dark mode support */
+                          @media (prefers-color-scheme: dark) {
+                            .language-options {
+                              background: rgba(0, 0, 0, 0.4);
+                              border-color: rgba(255, 255, 255, 0.1);
+                            }
+                            
+                            .language-option {
+                              color: #eee;
+                            }
+                            
+                            .language-option.active {
+                              background: rgba(255, 255, 255, 0.15);
+                              color: #fff;
+                            }
+                            
+                            .language-divider {
+                              background: rgba(255, 255, 255, 0.2);
+                            }
+                          }
+                          </style>
                         
                         
                         
