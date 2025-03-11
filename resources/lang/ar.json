@@ -355,7 +355,38 @@
                                                                                             "Action": "الإجراء",
                                                                                             "Confirm": "تأكيد",
                                                                                             "Enter code": "أدخل الرمز",
-                                                                                            "No unconfirmed transactions found.": "لم يتم العثور على معاملات غير مؤكدة."
+                                                                                            "No unconfirmed transactions found.": "لم يتم العثور على معاملات غير مؤكدة.",
+
+                                                                                            
+                                                                                                "Vendor Employee Login": "تسجيل دخول موظف المورد",
+                                                                                                "Manage Branches": "ادارة الفروع",
+                                                                                                "Remember Me": "تذكرني",
+                                                                                                "Login": "تسجيل الدخول",
+                                                                                            
+                                                                                                
+                                                                                                
+                                                                                                    "Latitude / Longitude": "خط العرض / خط الطول",
+                                                                                                 
+                                                                                                    "Manager": "المدير",
+                                                                                              
+                                                                                                    "Operating Hours": "ساعات العمل",
+                                                                                             
+                                                                                                    "No Photo Available": "لا توجد صورة متاحة",
+                                                                                                    
+                                                                                                   
+                                                                                                        "Current": "الحالي",
+                                                                                               
+                                                                                                        "Is Active": "نشط",
+                                                                                                        "Yes": "نعم",
+                                                                                                        "No": "لا",
+                                                                                                        "Opening Time (HH:MM)": "وقت الفتح (ساعة:دقيقة)",
+                                                                                                        "Closing Time (HH:MM)": "وقت الإغلاق (ساعة:دقيقة)",
+                                                                                                        "Submit": "إرسال"
+                                                                                                    
+                                                                                                        }
+                                                                                                        
+                                                                                                    
+                                                                                                
                                                                                         
                                                                                         
                                                                                     
@@ -367,7 +398,7 @@
                                                                         
                                                                         
 
-}
+
                                                                       
                                                                 
                                                             

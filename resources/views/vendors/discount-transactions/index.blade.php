@@ -35,7 +35,6 @@
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Discount %') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Discount Amount') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Confirmation Code') }}</th>
-                            <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Action') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,7 +48,7 @@
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">
                                     <form action="{{ route('vendors.discount-transactions.confirm', $transaction->id) }}" method="POST" class="flex items-center space-x-2">
                                         @csrf
-                                        <input type="text" name="confirmation_code" value="{{ old('confirmation_code') }}" class="px-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 w-32" placeholder="Enter code" required>
+                                        <input type="text" name="confirmation_code" value="{{ old('confirmation_code') }}" class="px-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 w-32" placeholder="{{__('Enter code')}}" required>
                                         <button type="submit" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition duration-200 shadow-sm">
                                             <i class="fas fa-check mr-1"></i> {{__('Confirm')}}
                                         </button>

@@ -20,8 +20,6 @@
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Name') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Email') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Phone') }}</th>
-                            <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Position') }}</th>
-                            <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Department') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Status') }}</th>
                             <th class="p-4 text-sm font-semibold text-gray-700 border-b border-gray-200">{{ __('Actions') }}</th>
                         </tr>
@@ -32,8 +30,6 @@
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ $employee->name }}</td>
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ $employee->email }}</td>
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ $employee->phone ?? 'N/A' }}</td>
-                                <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ $employee->position ?? 'N/A' }}</td>
-                                <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ $employee->department->name ?? 'N/A' }}</td>
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">
                                     @if($employee->status == 'active')
                                         <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded-full shadow-sm">{{ __('Active') }}</span>

@@ -158,7 +158,7 @@
                         @foreach (['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as $day)
                             <label class="flex items-center">
                                 <input type="checkbox" name="working_days[]" value="{{ $day }}" {{ in_array($day, old('working_days', json_decode($branch->working_days, true) ?? [])) ? 'checked' : '' }} class="mr-2 text-purple-500 focus:ring-purple-500">
-                                <span class="text-sm text-gray-600">{{ $day }}</span>
+                                <span class="text-sm text-gray-600">{{ __($day) }}</span>
                             </label>
                         @endforeach
                     </div>

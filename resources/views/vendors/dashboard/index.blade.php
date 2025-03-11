@@ -38,11 +38,11 @@
                             <strong class="font-semibold">{{__('Status')}}:</strong>
                             <span class="ml-2 font-semibold">
                                 @if ($vendor->is_active && !$vendor->blocked && $vendor->is_approved)
-                                    <span class="text-green-600 bg-green-100 px-3 py-1 rounded-full shadow-sm hover:bg-green-200 transition-all duration-300">Active & Approved</span>
+                                    <span class="text-green-600 bg-green-100 px-3 py-1 rounded-full shadow-sm hover:bg-green-200 transition-all duration-300">{{__('Active & Approved')}}</span>
                                 @elseif ($vendor->blocked)
-                                    <span class="text-red-600 bg-red-100 px-3 py-1 rounded-full shadow-sm hover:bg-red-200 transition-all duration-300">Blocked</span>
+                                    <span class="text-red-600 bg-red-100 px-3 py-1 rounded-full shadow-sm hover:bg-red-200 transition-all duration-300">{{__('Blocked')}}</span>
                                 @else
-                                    <span class="text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full shadow-sm hover:bg-yellow-200 transition-all duration-300">Pending Approval</span>
+                                    <span class="text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full shadow-sm hover:bg-yellow-200 transition-all duration-300">{{__('Pending Approval')}}</span>
                                 @endif
                             </span>
                         </p>
