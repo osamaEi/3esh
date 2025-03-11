@@ -381,8 +381,22 @@
                                                                                                         "No": "لا",
                                                                                                         "Opening Time (HH:MM)": "وقت الفتح (ساعة:دقيقة)",
                                                                                                         "Closing Time (HH:MM)": "وقت الإغلاق (ساعة:دقيقة)",
-                                                                                                        "Submit": "إرسال"
+                                                                                                        "Submit": "إرسال",
                                                                                                     
+                                                                                                        
+                                                                                                            "Welcome Back, Admin!": "مرحبًا بعودتك، المشرف!",
+                                                                                                            "Here's what's happening with your platform today.": "إليك ما يحدث في منصتك اليوم.",
+                                                                                                            "Vendors": "البائعون",
+                                                                                                            "Total Listings": "إجمالي القوائم",
+                                                                                                            "Clients": "العملاء",
+                                                                                                            "Business Listings": "قوائم الأعمال",
+                                                                                                            "Categories": "الفئات",
+                                                                                                            "Total Classifications": "إجمالي التصنيفات",
+                                                                                                            "Revenue": "الإيرادات",
+                                                                                                            "Monthly Income": "الدخل الشهري",
+                                                                                                            "Traffic Analytics": "تحليلات الزيارات",
+                                                                                                            "Normal Ads": "الإعلانات العادية",
+                                                                                                            "Commercial Ads": "الإعلانات التجارية"
                                                                                                         }
                                                                                                         
                                                                                                     
