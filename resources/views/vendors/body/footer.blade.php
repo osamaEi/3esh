@@ -64,4 +64,32 @@
             <div class="text-gray-500">{{__('Privacy Policy')}}</div>
         </div>
     </div>
+    @if (Auth::guard('employee')->check())
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const dropdown = document.getElementById('menu-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        document.getElementById('notifications-toggle').addEventListener('click', function () {
+            const dropdown = document.getElementById('notifications-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function (event) {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuDropdown = document.getElementById('menu-dropdown');
+            const notificationsToggle = document.getElementById('notifications-toggle');
+            const notificationsDropdown = document.getElementById('notifications-dropdown');
+
+            if (!menuToggle.contains(event.target) && !menuDropdown.contains(event.target)) {
+                menuDropdown.classList.add('hidden');
+            }
+            if (!notificationsToggle.contains(event.target) && !notificationsDropdown.contains(event.target)) {
+                notificationsDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+@endif
 </footer>

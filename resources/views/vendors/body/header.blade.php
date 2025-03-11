@@ -14,7 +14,18 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+
 </head>
+
+<style>
+
+body, html {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+</style>
 <body class="font-sans">
     <!-- Header Navigation -->
     <header class="bg-white shadow-sm">
@@ -22,18 +33,14 @@
             <a href="{{ url('/') }}" class="h-12 w-12">
                 <img src="{{ asset('photos/logo.png') }}" alt="Live Plus Logo" class="h-15 w-15 p-1">
             </a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="{{ url('/') }}" class="text-gray-700 hover:text-purple-700">{{__('Home')}}</a>
-                <a href="{{ url('/learn') }}" class="text-gray-700 hover:text-purple-700">{{__('Learn')}}</a>
-                <a href="{{ url('/faqs') }}" class="text-gray-700 hover:text-purple-700">{{__('FAQs')}}</a>
-                <a href="{{ route('vendors.register') }}" class="text-gray-700 hover:text-purple-700">{{__('Join us')}}</a>
-            </nav>
+           
             @if (Auth::guard('employee')->check())
-                <nav class=" md:flex space-x-8">
-                    <a href="{{ url('/') }}" class="text-gray-700 hover:text-purple-700">Home</a>
-                    <a href="{{ url('/learn') }}" class="text-gray-700 hover:text-purple-700">Learn</a>
-                    <a href="{{ url('/faqs') }}" class="text-gray-700 hover:text-purple-700">FAQs</a>
-                    <a href="{{ url('/join') }}" class="text-gray-700 hover:text-purple-700">Join us</a>
+                <nav class="hidden md:flex space-x-8 rtl:space-x-reverse">
+                    <a href="{{ url('/') }}" class="text-gray-700 hover:text-purple-700">{{__('Home')}}</a>
+                    <a href="{{ url('/learn') }}" class="text-gray-700 hover:text-purple-700">{{__('Learn')}}</a>
+                    <a href="{{ url('/faqs') }}" class="text-gray-700 hover:text-purple-700">{{__('FAQs')}}</a>
+                    <a href="{{ route('vendors.register') }}" class="text-gray-700 hover:text-purple-700">{{__('Join us')}}</a>
+                
                     <div class="relative inline-block text-left">
                         <button id="languageDropdownButton" class="flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-md shadow-md hover:bg-gray-200 focus:outline-none">
                             <span class="mr-2">

@@ -348,6 +348,10 @@
                                                                     "Manage Employees": "إدارة الموظفين",
                                                                     "No vendor data available.": "لا توجد بيانات للبائع.",
                                                                     
+                                                                        "Start Spending The Smart Way": "ابدأ الإنفاق بالطريقة الذكية",
+                                                                        "Take Control of Your Finances Anytime, Anywhere with live plus. Discover the Smart Way to Use Your Money!": "تحكم في أموالك في أي وقت وأي مكان مع عيش بلس. اكتشف الطريقة الذكية لاستخدام أموالك!",
+                                                                    
+                                                                    
                                                                         "Vendor Registration": "تسجيل البائع",
                                                                         "Business Information": "معلومات العمل",
                                                                         "Business Name": "اسم الشركة",
@@ -372,7 +376,56 @@
                                                                         "Submit Registration": "إرسال التسجيل",
                                                                         "Submitting...": "جاري الإرسال...",
                                                                         "Please correct the errors below.": "يرجى تصحيح الأخطاء أدناه.",
-                                                                        "An error occurred while processing your request. Please try again.": "حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى."
+                                                                        "An error occurred while processing your request. Please try again.": "حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.",
+                                                                        
+                                                                            "Vendor Hub": "مركز البائع",
+                                                                            "Dashboard": "لوحة التحكم",
+                                                                            "Branches": "الفروع",
+                                                                            "Employees": "الموظفون",
+                                                                            "Discount Transaction": "معاملات الخصم",
+                                                                            "Logout": "تسجيل الخروج",
+                                                                            
+                                                                                "Make every penny count": "اجعل كل قرش مهمًا",
+                                                                                "Spend smarter, lower your bills, get cashback on everything you buy.": "أنفق بذكاء، خفض فواتيرك، واحصل على استرداد نقدي على كل ما تشتريه.",
+                                                                                "Pay with Kobodrop, quick, simple and easy": "ادفع مع كوبودروب، سريع، بسيط وسهل",
+                                                                                "Paying your bills on Kobodrop has never been easier. Whether you are paying for electricity or internet, Kobodrop gets it done within seconds.": "دفع فواتيرك على كوبودروب لم يكن أسهل من ذلك. سواء كنت تدفع للكهرباء أو الإنترنت، كوبودروب ينجز الأمر في ثوانٍ.",
+                                                                                "Data level security": "أمان على مستوى البيانات",
+                                                                                "Your money is 100% safe and secure on Kobodrop. No hassles, no glitches, get access to your money anytime.": "أموالك آمنة 100٪ على كوبودروب. بدون متاعب، بدون أخطاء، يمكنك الوصول إلى أموالك في أي وقت.",
+                                                                                "Greate offers": "عروض رائعة",
+                                                                                "Kobodrop reduced payments maintenance and processing fees. No hidden fees": "كوبودروب خفض رسوم الصيانة ومعالجة المدفوعات. لا رسوم خفية.",
+                                                                                "All payment methods are available.": "جميع طرق الدفع متاحة.",
+                                                                                "Transfers, payments all work on Kobodrop. Get your alert message immediately after a completed transaction.": "التحويلات والمدفوعات تعمل جميعها على كوبودروب. احصل على إشعار فور إتمام المعاملة.",
+                                                                                
+                                                                                    "FEATURES": "المميزات",
+                                                                                    "Check Out Our Benefits": "تحقق من فوائدنا",
+                                                                                    "Feature 1": "الميزة 1",
+                                                                                    "Feature 2": "الميزة 2",
+                                                                                    "Feature 3": "الميزة 3",
+                                                                                    "Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.": "قم بتضمين التلال الوعرة في مواقع مميزة، الآن. سكيليريسك أليكات فوسيبوس تينسيند يور أديبيسينج سوسيس آركو لورم بورتتيتور.",
+                                                                                    "ADVANTAGES": "المزايا",
+                                                                                    "Why Choose Live Plus?": "لماذا تختار عيش بلس؟",
+                                                                                    "Arcu At Dictum Sapien, Mollis. Vulputate Sit Id Accumsan, Ultricies. In Ultricies Malesuada Elit Mauris Etiam Quis. Duis Tristique Lectus. Et Blandit Viverra Nisl Velit. Sed Mattis Pharetra Dolor Suspendisse Sit. Nunc, Gravida Eu Lectus Eget Eget Ac Dolor Neque Lorem Sapien, Suspendisse Aliquam.": "القوس عند الديكتوم سابين، موليس. الجلوس في مكان التجميع، فائق السرعة. في ألتراسيز ماليسوادا إليت موريس إيتيم كويس. دويس تريستيك ليكتوس. وبلاندت فيفيرا نيسل فيليت. سيد ماتيس فاريترا دولور ساسبنديس سيت. نونك، جرافيدا يو ليكتوس إيجيت إيجيت أك دولور نيكيه لوريم سابين، ساسبنديس أليكوام.",
+                                                                                    
+                                                                                        "JOIN US": "انضم إلينا",
+                                                                                        "Send Your Information To Join Us": "أرسل معلوماتك للانضمام إلينا",
+                                                                                        "Name": "الاسم",
+                                                                                        "Enter phone number": "أدخل رقم الهاتف",
+                                                                                        "Email": "البريد الإلكتروني",
+                                                                                        "Enter Email": "أدخل البريد الإلكتروني",
+                                                                                        "Phone number": "رقم الهاتف",
+                                                                                        "Number of branches": "عدد الفروع",
+                                                                                        "Enter Number of branches": "أدخل عدد الفروع",
+                                                                                        "Attachments for the commercial register": "مرفقات السجل التجاري",
+                                                                                        "Please upload attachments for the commercial register": "يرجى تحميل مرفقات السجل التجاري",
+                                                                                        "Send Now": "أرسل الآن"
+                                                                                    
+                                                                                    
+                                                                                  
+                                                                                  
+                                                                            
+                                                                            
+                                                                        
+                                                                        
 
 }
                                                                       

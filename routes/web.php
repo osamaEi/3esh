@@ -15,9 +15,11 @@ use App\Http\Controllers\LanguageController;
 */
 require __DIR__.'/admin.php';
 require __DIR__.'/vendor.php';
+Route::group(['middleware' => 'setlocale'], function () {
 
 Route::get('/', function () {
     return view('welcome');
+});
 });
 
 Route::get('/lang/{lang}', [LanguageController::class, 'switch'])->name('lang.switch');

@@ -325,7 +325,7 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="bg-purple-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-800 transition duration-300">Send Now')}}</button>
+                <button type="submit" class="bg-purple-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-800 transition duration-300">{{__('Send Now')}}</button>
             </form>
         </div>
     </section>
