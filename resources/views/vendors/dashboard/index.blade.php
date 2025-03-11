@@ -68,7 +68,7 @@
                         <p class="text-sm text-gray-700 flex items-center">
                             <i class="fas fa-tags mr-4 text-purple-500"></i>
                             <strong class="font-semibold">{{__('Categories')}}:</strong> 
-                            <span class="ml-2 text-gray-600 hover:text-purple-600 transition-colors duration-200">{{ $vendor->categories->pluck('name')->implode(', ') ?: 'None' }}</span>
+                            <span class="ml-2 text-gray-600 hover:text-purple-600 transition-colors duration-200">{{ $vendor->categories->pluck('name')->implode(', ') ?: '-' }}</span>
                         </p>
                         <p class="text-sm text-gray-700 flex items-center">
                             <i class="fas fa-clock mr-4 text-purple-500"></i>

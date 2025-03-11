@@ -184,7 +184,7 @@
                                     <!-- New employee entries will be added here -->
                                 </div>
 
-                                <p id="no-employees-message" class="text-gray-500 text-sm italic mt-2">No employees added yet. Click the "Add Employee" button to add employees')}}.</p>
+                                <p id="no-employees-message" class="text-gray-500 text-sm italic mt-2">{{__('No employees added yet. Click the "Add Employee" button to add employees')}}.</p>
                             </div>
 
                             <div class="flex justify-end space-x-3">

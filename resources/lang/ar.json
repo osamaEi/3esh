@@ -39,16 +39,12 @@
         "This Week": "هذا الأسبوع",
         "This Month": "هذا الشهر",
         "This Quarter": "هذا الربع",
-        "Vendors": "البائعين",
-        "Users": "المستخدمين",
+
         "Subscriptions": "الاشتراكات",
-        "Categories": "الفئات",
         "since last month": "منذ الشهر الماضي",
         "Download Report": "تحميل التقرير",
         
-            "Dashboard": "لوحة التحكم",
             "Manage Categories": "إدارة الفئات",
-            "Categories": "الفئات",
             "All Categories": "جميع الفئات",
             "Create New": "إنشاء جديد",
             "View Tree": "عرض الشجرة",
@@ -57,10 +53,8 @@
             "Name": "الاسم",
             "Description": "الوصف",
             "Parent": "الفئة الأصل",
-            "Status": "الحالة",
             "Actions": "الإجراءات",
-            "Active": "نشط",
-            "Inactive": "غير نشط",
+          
             "Edit": "تعديل",
             "View": "عرض",
             "Delete": "حذف",
@@ -75,47 +69,29 @@
             "Close": "إغلاق",
             "Root Category": "الفئة الجذر",
             "No description": "لا يوجد وصف",
-            "Created At": "تاريخ الإنشاء",
             "Updated At": "آخر تحديث",
             
                 "Create New Subscription Plan": "إنشاء خطة اشتراك جديدة",
-                "Name": "الاسم",
                 "Price": "السعر",
                 "Duration": "المدة",
                 "Features": "المميزات",
-                "Photo": "الصورة",
-                "Status": "الحالة",
-                "Active": "نشط",
-                "Inactive": "غير نشط",
+        
                 "Create": "إنشاء",
                 "Subscription Plans": "خطط الاشتراك",                
                     "Edit Subscription Plan": "تعديل خطة الاشتراك",
-                    "Name": "الاسم",
-                    "Price": "السعر",
+          
                     "Duration (Days)": "المدة (بالأيام)",
-                    "Features": "المميزات",
-                    "Photo": "الصورة",
-                    "Status": "الحالة",
-                    "Active": "نشط",
-                    "Inactive": "غير نشط",
+          
                     "Update": "تحديث",
                 
                 
-            
-                "Create New Category": "إنشاء فئة جديدة",
-                "Name": "الاسم",
-                "Description": "الوصف",
+          
                 "Parent Category": "الفئة الأصل",
                 "None": "لا شيء",
-                "Status": "الحالة",
-                "Active": "نشط",
-                "Inactive": "غير نشط",
-                "Photo": "الصورة",
-                "Create": "إنشاء",
+           
                 "Edit Category": "تعديل الفئة",
                 "update": "تعديل",
-                "Update": "تعديل",
-                "Photo": "الصورة",
+         
     "Choose File": "اختر ملف",
     "No file chosen": "لم يتم اختيار ملف",
             
@@ -125,16 +101,13 @@
         "Add New Setting": "إضافة إعداد جديد",
         "Key": "المفتاح",
         "Value": "القيمة",
-        "Actions": "الإجراءات",
         "Image": "صورة",
         "Text": "نص",
         "View Larger": "عرض بحجم أكبر",
         "View Full": "عرض كامل",
-        "Edit": "تعديل",
-        "Delete": "حذف",
+     
         "No settings found. Add your first setting now!": "لم يتم العثور على إعدادات. أضف الإعداد الأول الآن!",
         "Text Setting Value": "قيمة إعداد النص",
-        "Close": "إغلاق",
         "Image Setting Value": "قيمة إعداد الصورة",
         "Download Image": "تحميل الصورة",
         "Confirm Delete": "تأكيد الحذف",
@@ -184,16 +157,24 @@
                             "Business Name": "اسم النشاط التجاري",
                             
                             "Logo": "الشعار",
-                        
+                            "Back to Branches": "العودة إلى الفروع",
                             "Contact Person": "الشخص المسؤول",
-                        
+                            
+                                "Pending": "قيد الانتظار",
+                            
+                                
+                                    "Back to Employees": "العودة إلى الموظفين",
+                                    "Select a Branch (Optional)": "اختر فرعًا (اختياري)",
+                                    "Photo (Current:": "الصورة (الحالية:",
+                                    "Update Employee": "تحديث الموظف",
+                                
+                                
                             
                                 "Add New Branch": "إضافة فرع جديد",
                               
                                 "Create Branch": "إنشاء فرع",
                                 
                                     "Edit Branch": "تعديل الفرع",
-                                    "Back to List": "العودة إلى القائمة",
                                     "View Branch": "عرض الفرع",
                                     "Vendor": "البائع",
                                     "Select Vendor": "اختر البائع",
@@ -201,8 +182,7 @@
                                     "Address": "العنوان",
                                     "Latitude": "خط العرض",
                                     "Longitude": "خط الطول",
-                                    "Phone": "الهاتف",
-                                    "Email": "البريد الإلكتروني",
+                          
                                     "Manager Name": "اسم المدير",
                                     "Branch Photo": "صورة الفرع",
                                     "Leave empty to keep the current photo.": "اتركه فارغًا للاحتفاظ بالصورة الحالية.",
@@ -219,58 +199,22 @@
                                     "Sunday": "الأحد",
                                     "Notes": "ملاحظات",
                                     "Approved": "معتمد",
-                                    "Active": "نشط",
+                         
                                     "Update Branch": "تحديث الفرع",
                                     
                                         "Branch Details": "تفاصيل الفرع",
-                                        "Back to List": "العودة إلى القائمة",
-                                        "Edit Branch": "تعديل الفرع",
-                                        "Vendor": "البائع",
-                                        "Name": "الاسم",
-                                        "Address": "العنوان",
-                                        "Phone": "الهاتف",
-                                        "Email": "البريد الإلكتروني",
-                                        "Manager": "المدير",
-                                        "Status": "الحالة",
-                                        "Active": "نشط",
-                                        "Inactive": "غير نشط",
-                                        "Approved": "معتمد",
-                                        "Pending": "قيد الانتظار",
-                                        "Opening Time": "وقت الافتتاح",
-                                        "Closing Time": "وقت الإغلاق",
-                                        "Working Days": "أيام العمل",
-                                        "Monday": "الإثنين",
-                                        "Tuesday": "الثلاثاء",
-                                        "Wednesday": "الأربعاء",
-                                        "Thursday": "الخميس",
-                                        "Friday": "الجمعة",
-                                        "Saturday": "السبت",
-                                        "Sunday": "الأحد",
-                                        "Branch Photo": "صورة الفرع",
+                                 
                                         "No photo available": "لا توجد صورة متاحة",
                                         "Location": "الموقع",
-                                        "Notes": "ملاحظات",
-                                        
-                                            "Employees": "الموظفون",
+                                 
                                             "Add New Employee": "إضافة موظف جديد",
-                                            "ID": "المعرف",
-                                            "Name": "الاسم",
-                                            "Email": "البريد الإلكتروني",
-                                            "Phone": "الهاتف",
-                                            "Position": "المنصب",
+                                          
                                             "Department": "القسم",
-                                            "Status": "الحالة",
-                                            "Actions": "الإجراءات",
-                                            "Active": "نشط",
-                                            "Inactive": "غير نشط",
-                                            "View": "عرض",
-                                            "Edit": "تعديل",
-                                            "Delete": "حذف",
+                                         
                                             "Are you sure you want to delete this employee?": "هل أنت متأكد أنك تريد حذف هذا الموظف؟",
                                             "No employees found.": "لم يتم العثور على موظفين.",
                                             "Sign In": "تسجيل الدخول",
     "Welcome Back!": "مرحبًا بعودتك!",
-    "Email": "البريد الإلكتروني",
     "Password": "كلمة المرور",
     "Remember me": "تذكرني",
     "Log In": "تسجيل الدخول",
@@ -281,7 +225,6 @@
                                            
                                                 "Select a Vendor": "اختر مورداً",
                                                 "Profile Photo": "الصورة الشخصية",
-                                                "Password": "كلمة المرور",
                                                 "Confirm Password": "تأكيد كلمة المرور",
                                                 "Create Employee": "إنشاء موظف",
                                                 "JPG, JPEG, PNG, max 2MB": "JPG، JPEG، PNG، الحد الأقصى 2MB",
@@ -308,7 +251,6 @@
                                                         
                                                             "Transform your crypto business with Crypgo Premier, a template for startups and blockchain services.": "حوّل عملك في مجال العملات الرقمية مع Crypgo Premier، قالب مصمم للشركات الناشئة وخدمات البلوكشين.",
                                                             "Links": "روابط",
-                                                            "Features": "المميزات",
                                                             "Benefits": "الفوائد",
                                                             "Services": "الخدمات",
                                                             "Why us": "لماذا نحن",
@@ -327,24 +269,22 @@
                                                             
                                                                 "Home": "الرئيسية",
                                                                 "Learn": "تعلم",
-                                                                "FAQs": "الأسئلة الشائعة",
+                                                              
                                                                 "Join us": "انضم إلينا",
                                                                 "Install App": "تثبيت التطبيق",
                                                                 
                                                                     "Vendor Dashboard": "لوحة تحكم البائع",
-                                                                    "Email": "البريد الإلكتروني",
+                                                                 
                                                                     "Contact": "جهة الاتصال",
-                                                                    "Status": "الحالة",
+                                                              
                                                                     "Active & Approved": "نشط ومُعتمد",
-                                                                    "Blocked": "محظور",
+                                                                  
                                                                     "Pending Approval": "في انتظار الموافقة",
                                                                     "Overview": "نظرة عامة",
-                                                                    "Branches": "الفروع",
-                                                                    "Employees": "الموظفون",
+                                                              
                                                                     "Hours": "الساعات",
                                                                     "Last Updated": "آخر تحديث",
-                                                                    "Manage Branches": "إدارة الفروع",
-                                                                    "Manage Branches": "إدارة الفروع",
+                                                                
                                                                     "Manage Employees": "إدارة الموظفين",
                                                                     "No vendor data available.": "لا توجد بيانات للبائع.",
                                                                     
@@ -354,34 +294,22 @@
                                                                     
                                                                         "Vendor Registration": "تسجيل البائع",
                                                                         "Business Information": "معلومات العمل",
-                                                                        "Business Name": "اسم الشركة",
                                                                         "Email Address": "البريد الإلكتروني",
-                                                                        "Contact Person": "الشخص المسؤول",
                                                                         "Company Logo": "شعار الشركة",
                                                                         "Choose Logo": "اختر الشعار",
                                                                         "Business Photo": "صورة العمل",
                                                                         "Choose Photo": "اختر الصورة",
-                                                                        "Employees": "الموظفون",
-                                                                        "Add Employee": "إضافة موظف",
+                                                                     
                                                                         "Employee": "موظف",
                                                                         "No employees added yet. Click the \"Add Employee\" button to add employees": "لم تتم إضافة موظفين حتى الآن. انقر على زر \"إضافة موظف\" لإضافة موظفين",
-                                                                        "Name": "الاسم",
-                                                                        "Position": "المنصب",
-                                                                        "Email": "البريد الإلكتروني",
-                                                                        "Phone": "رقم الهاتف",
-                                                                        "Password": "كلمة المرور",
-                                                                        "Confirm Password": "تأكيد كلمة المرور",
-                                                                        "Photo": "الصورة",
-                                                                        "Cancel": "إلغاء",
+                                                                      
                                                                         "Submit Registration": "إرسال التسجيل",
                                                                         "Submitting...": "جاري الإرسال...",
                                                                         "Please correct the errors below.": "يرجى تصحيح الأخطاء أدناه.",
                                                                         "An error occurred while processing your request. Please try again.": "حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.",
                                                                         
                                                                             "Vendor Hub": "مركز البائع",
-                                                                            "Dashboard": "لوحة التحكم",
-                                                                            "Branches": "الفروع",
-                                                                            "Employees": "الموظفون",
+                                                                      
                                                                             "Discount Transaction": "معاملات الخصم",
                                                                             "Logout": "تسجيل الخروج",
                                                                             
@@ -408,16 +336,28 @@
                                                                                     
                                                                                         "JOIN US": "انضم إلينا",
                                                                                         "Send Your Information To Join Us": "أرسل معلوماتك للانضمام إلينا",
-                                                                                        "Name": "الاسم",
                                                                                         "Enter phone number": "أدخل رقم الهاتف",
-                                                                                        "Email": "البريد الإلكتروني",
                                                                                         "Enter Email": "أدخل البريد الإلكتروني",
                                                                                         "Phone number": "رقم الهاتف",
                                                                                         "Number of branches": "عدد الفروع",
                                                                                         "Enter Number of branches": "أدخل عدد الفروع",
                                                                                         "Attachments for the commercial register": "مرفقات السجل التجاري",
                                                                                         "Please upload attachments for the commercial register": "يرجى تحميل مرفقات السجل التجاري",
-                                                                                        "Send Now": "أرسل الآن"
+                                                                                        "Send Now": "أرسل الآن",
+                                                                                        
+                                                                                            "Discount Transactions": "المعاملات المخفضة",
+                                                                                            "Back to Dashboard": "العودة إلى لوحة التحكم",
+                                                                                            "User": "المستخدم",
+                                                                                            "Amount": "المبلغ",
+                                                                                            "Discount %": "نسبة الخصم",
+                                                                                            "Discount Amount": "مبلغ الخصم",
+                                                                                            "Confirmation Code": "رمز التأكيد",
+                                                                                            "Action": "الإجراء",
+                                                                                            "Confirm": "تأكيد",
+                                                                                            "Enter code": "أدخل الرمز",
+                                                                                            "No unconfirmed transactions found.": "لم يتم العثور على معاملات غير مؤكدة."
+                                                                                        
+                                                                                        
                                                                                     
                                                                                     
                                                                                   

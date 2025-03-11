@@ -16,7 +16,7 @@ class Authenticate extends Middleware
             // Check which guard is being used
             if (str_starts_with($request->path(), 'admin')) {
                 return route('admin.login');
-            } elseif (str_starts_with($request->path(), 'employee')) {
+            } elseif (str_starts_with($request->path(), 'vendors')) {
                 return route('vendors.login');
             }
             
