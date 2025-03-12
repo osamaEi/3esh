@@ -35,5 +35,9 @@ class SubscribtionRepository implements SubscriptionRepositoryInterface
         return $user->delete();
     }
 
- 
+    public function getSubscriptionVendors($subscriptionId, $perPage = 15)
+    {
+        $subscription = Subscription::findOrFail($subscriptionId);
+        return $subscription->vendors()->paginate($perPage);
+    }
 }

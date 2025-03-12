@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Branch;
 use App\Models\Category;
 use App\Models\Employee;
+use App\Models\Subscription;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -39,5 +40,9 @@ class Vendor extends Model
     {
         return $this->belongsToMany(Category::class, 'vendor_categories');
     }
-
+    public function subscriptionPlans()
+    {
+        return $this->belongsToMany(Subscription::class, 'subscription_vendors', 'vendor_id', 'subscription_id')
+                    ->withTimestamps();
+    }
 }

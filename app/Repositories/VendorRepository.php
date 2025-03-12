@@ -24,6 +24,13 @@ class VendorRepository implements VendorRepositoryInterface
         return $this->model->findOrFail($id);
     }
 
+    public function findByCategory($categoryId)
+{
+    return $this->model->whereHas('categories', function($query) use ($categoryId) {
+        $query->where('categories.id', $categoryId);
+    })->get();
+}
+
     public function create(array $data)
     {
 
