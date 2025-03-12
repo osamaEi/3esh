@@ -5,6 +5,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\VendorController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\Auth\LoginController;
@@ -80,5 +81,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin', 'as' => 'admin.
     
     Route::resource('subscriptions', SubscriptionController::class);
 });
+Route::middleware('auth:admin')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.edit');
 
+    Route::resource('UserProfile', ProfileController::class);
+    Route::post('/update-email', [ProfileController::class, 'updateEmail'])->name('update.email');
+});
 });
