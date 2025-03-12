@@ -53,7 +53,7 @@ class EmployeeController extends Controller
             $employee->categories()->sync($request->categories);
         }
     
-        return redirect()->route('employees.index')->with('success', __('employee created successfully.'));
+        return redirect()->route('admin.employees.index')->with('success', __('employee created successfully.'));
     }
 
     // Display the specified employee
@@ -76,14 +76,14 @@ class EmployeeController extends Controller
     public function update(EmployeeRequest $request, $id)
     {
         $this->employeeRepository->update($id, $request->validated());
-        return redirect()->route('employees.index')->with('success', __('employee updated successfully.'));
+        return redirect()->route('admin.employees.index')->with('success', __('employee updated successfully.'));
     }
 
     // Remove the specified employee from the database
     public function destroy($id)
     {
         $this->employeeRepository->delete($id);
-        return redirect()->route('employees.index')->with('success', __('employee deleted successfully.'));
+        return redirect()->route('admin.employees.index')->with('success', __('employee deleted successfully.'));
     }
 
 

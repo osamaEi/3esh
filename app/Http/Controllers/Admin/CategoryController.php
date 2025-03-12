@@ -100,7 +100,7 @@ class CategoryController extends Controller
     {
         $this->categoryRepository->update($request->validated(), $id);
         
-        return redirect()->route('categories.index')
+        return redirect()->route('admin.categories.index')
         ->with('success', __('Category updated successfully'));
 
     }
@@ -115,7 +115,7 @@ class CategoryController extends Controller
     {
         $this->categoryRepository->delete($id);
         
-        return redirect()->route('categories.index')
+        return redirect()->route('admin.categories.index')
                         ->with('success', __('Category deleted successfully.'));
     }
     

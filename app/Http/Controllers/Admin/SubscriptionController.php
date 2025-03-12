@@ -67,12 +67,12 @@ class SubscriptionController extends Controller
         }
 
         $this->subscriptionRepository->update($id, $data);
-        return redirect()->route('subscriptions.index')->with('success', 'Subscription updated successfully.');
+        return redirect()->route('admin.subscriptions.index')->with('success', 'Subscription updated successfully.');
     }
 
     public function destroy($id)
     {
         $this->subscriptionRepository->delete($id);
-        return redirect()->route('subscriptions.index')->with('success', 'Subscription deleted successfully.');
+        return redirect()->route('admin.subscriptions.index')->with('success', 'Subscription deleted successfully.');
     }
 }
