@@ -14,6 +14,18 @@ class VendorResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'business_name' => $this->business_name,
+            'email' => $this->email,
+            'logo' => $this->logo ? url('storage/' . $this->logo) : null,
+            // 'photo' => $this->photo ? asset('storage/' . $this->photo) : null,
+            'contact_person' => $this->contact_person,
+            // 'categories' => $this->whenLoaded('categories', function() {
+            //     return CategoryResource::collection($this->categories);
+            // }),
+            // 'created_at' => $this->created_at,
+            // 'updated_at' => $this->updated_at,
+        ];
     }
 }
