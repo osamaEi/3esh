@@ -28,8 +28,8 @@ class VendorController extends Controller
     public function index()
     {
         $vendors = $this->vendorRepository->getAllActiveAndApproved();
-        return VendorResource::collection($vendors);
 
+        return VendorResource::collection($vendors);
     }
 
     public function findByCategory($id){
@@ -48,6 +48,33 @@ class VendorController extends Controller
         return new ShowVendorResource($vendor);
 
 
+    }
+
+    public function search(Request $request)
+    {
+        $params = $request->validate([
+            'name' => 'nullable|string|max:255',
+            'category_id' => 'nullable|integer|exists:categories,id',
+            'latitude' => 'nullable|numeric|required_with:longitude',
+            'longitude' => 'nullable|numeric|required_with:latitude',
+            'radius' => 'nullable|numeric|min:0.1|max:100',
+        ]);
+        
+        $vendors = $this->vendorRepository->search($params);
+        
+        // Load relationships if not already loaded
+        if (!$vendors->first() || !$vendors->first()->relationLoaded('categories')) {
+            $vendors->load('categories');
+        }
+        
+        // Make sure we only load active branches
+        if (!isset($params['latitude']) || !isset($params['longitude'])) {
+            $vendors->load(['branches' => function($query) {
+                $query->where('is_active', 1);
+            }]);
+        }
+        
+        return response()->json($vendors);
     }
 
 }

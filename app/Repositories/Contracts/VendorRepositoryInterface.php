@@ -26,4 +26,6 @@ interface VendorRepositoryInterface
     public function block($id);
     
     public function unblock($id);
+    
+    public function search(array $params);
 }

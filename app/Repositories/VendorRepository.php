@@ -134,4 +134,115 @@ class VendorRepository implements VendorRepositoryInterface
     {
         \Storage::delete('public/' . $path);
     }
+    
+    /**
+     * Search for vendors based on multiple criteria
+     * Only returns active and approved vendors
+     * 
+     * @param array $params
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function search(array $params)
+    {
+        $query = $this->model->where('is_approved', 1)
+                            ->where('is_active', 1);
+        
+        // Search by vendor name
+        if (!empty($params['name'])) {
+            $query->where('business_name', 'LIKE', '%' . $params['name'] . '%');
+        }
+        
+        // Search by category
+        if (!empty($params['category_id'])) {
+            $query->whereHas('categories', function($q) use ($params) {
+                $q->where('categories.id', $params['category_id']);
+            });
+        }
+        
+        // Define a variable to track if we're doing location search
+        $locationSearch = false;
+        
+        // Search by location (latitude and longitude)
+        if (!empty($params['latitude']) && !empty($params['longitude'])) {
+            $lat = $params['latitude'];
+            $lng = $params['longitude'];
+            $radius = $params['radius'] ?? 10; // Default radius is 10 km
+            $locationSearch = true;
+            
+            // Filter vendors that have branches within the radius
+            $query->whereHas('branches', function($q) use ($lat, $lng, $radius) {
+                $q->whereRaw("(
+                    6371 * acos(
+                        cos(radians(?)) * 
+                        cos(radians(latitude)) * 
+                        cos(radians(longitude) - radians(?)) + 
+                        sin(radians(?)) * 
+                        sin(radians(latitude))
+                    )
+                ) < ?", [$lat, $lng, $lat, $radius]);
+            });
+            
+            // Eager load branches with distance calculation
+            $query->with(['branches' => function($q) use ($lat, $lng) {
+                $q->selectRaw("*, (
+                    6371 * acos(
+                        cos(radians(?)) * 
+                        cos(radians(latitude)) * 
+                        cos(radians(longitude) - radians(?)) + 
+                        sin(radians(?)) * 
+                        sin(radians(latitude))
+                    )
+                ) AS distance", [$lat, $lng, $lat])
+                ->orderBy('distance', 'asc');
+            }]);
+        } else {
+            // If not doing location search, just load active branches
+            $query->with(['branches' => function($q) {
+                $q->where('is_active', 1);
+            }]);
+        }
+        
+        // Always load categories
+        $query->with('categories');
+        
+        // If we're doing location search, order by the nearest branch
+        if ($locationSearch) {
+            // First, get the vendor IDs we need
+            $vendorResults = $query->get();
+            $vendorIds = $vendorResults->pluck('id')->toArray();
+            
+            if (empty($vendorIds)) {
+                return collect([]);
+            }
+            
+            // Then, do a separate query to get the minimum distance for each vendor
+            // and order by that distance
+            $orderedVendors = $this->model
+                ->whereIn('id', $vendorIds)
+                ->where('is_approved', 1)
+                ->where('is_active', 1)
+                ->with(['branches' => function($q) use ($lat, $lng) {
+                    $q->selectRaw("*, (
+                        6371 * acos(
+                            cos(radians(?)) * 
+                            cos(radians(latitude)) * 
+                            cos(radians(longitude) - radians(?)) + 
+                            sin(radians(?)) * 
+                            sin(radians(latitude))
+                        )
+                    ) AS distance", [$lat, $lng, $lat])
+                    ->orderBy('distance', 'asc');
+                }])
+                ->with('categories')
+                ->get()
+                ->sortBy(function ($vendor) {
+                    // Sort by the distance of the nearest branch
+                    return $vendor->branches->min('distance');
+                });
+            
+            return $orderedVendors->values();
+        }
+        
+        return $query->get();
+    }
 }
