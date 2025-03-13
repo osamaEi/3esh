@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Vendor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\SubscriptionRequest;
 use App\Repositories\Contracts\SubscriptionRepositoryInterface;
 
@@ -24,7 +25,8 @@ class SubscriptionController extends Controller
 
     public function create()
     {
-        return view('admin.subscriptions.create');
+        $vendors = Vendor::all();
+        return view('admin.subscriptions.create',compact('vendors'));
     }
 
     public function store(SubscriptionRequest $request)
@@ -41,7 +43,13 @@ class SubscriptionController extends Controller
             $data['features'] = json_decode($data['features'], true);
         }
         
-        $this->subscriptionRepository->create($data);
+        // Create subscription
+        $subscription = $this->subscriptionRepository->create($data);
+        
+        // Attach vendors if selected
+        if ($request->has('vendor_ids')) {
+            $subscription->vendors()->attach($request->vendor_ids);
+        }
         
         return redirect()->route('admin.subscriptions.index')->with('success', 'Subscription created successfully.');
     }

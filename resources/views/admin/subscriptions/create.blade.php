@@ -1,5 +1,4 @@
 @extends('admin.index')
-
 @section('content')
 <div class="container-fluid">
     <div class="card shadow-lg">
@@ -30,6 +29,14 @@
                     <input type="file" name="photo" id="photo" class="form-control">
                 </div>
                 <div class="mb-3">
+                    <label for="vendors" class="form-label">{{__('Vendors')}}</label>
+                    <select name="vendor_ids[]" id="vendors" class="form-control select2" multiple>
+                        @foreach($vendors as $vendor)
+                            <option value="{{ $vendor->id }}">{{ $vendor->business_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="is_active" class="form-label">{{__('Status')}}</label>
                     <select name="is_active" id="is_active" class="form-control">
                         <option value="1">{{__('Active')}}</option>
@@ -44,3 +51,11 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+</script>
+@endpush
