@@ -30,3 +30,24 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCFPYIn9vRjpNjWG5u2QdPzgOKU5ylvk2U",
+  authDomain: "esh-2aa30.firebaseapp.com",
+  projectId: "esh-2aa30",
+  storageBucket: "esh-2aa30.firebasestorage.app",
+  messagingSenderId: "341707444667",
+  appId: "1:341707444667:web:f23e6725b337dca221749e",
+  measurementId: "G-GEZQRL1FPB"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

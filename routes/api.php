@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\ProfileController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\SubscriptionController;
 use App\Http\Controllers\Api\UserSubscriptionController;
+use App\Http\Controllers\API\DiscountTransactionController;
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -50,7 +51,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/cancel-subscription', [UserSubscriptionController::class, 'cancelSubscription']);
 });
 Route::middleware('auth:sanctum')->group(function () {
-    // User profile routes
     Route::get('/profile', [ProfileController::class, 'getProfile']);
     Route::post('/profile', [ProfileController::class, 'updateProfile']);
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/discounts/create', [DiscountTransactionController::class, 'createTransaction']);
 });

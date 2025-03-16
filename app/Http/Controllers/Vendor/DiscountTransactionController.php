@@ -19,7 +19,6 @@ class DiscountTransactionController extends Controller
 
         // Fetch unconfirmed transactions for the vendor
         $transactions = DiscountTransaction::where('vendor_id', $employee->vendor_id)
-            ->where('is_confirmed', false)
             ->with(['user', 'branch', 'employee']) // Load relationships
             ->get();
 

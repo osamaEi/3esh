@@ -45,15 +45,49 @@
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ number_format($transaction->amount, 2) }}</td>
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ $transaction->discount_percentage }}%</td>
                                 <td class="p-4 text-sm text-gray-600 border-b border-gray-200">{{ number_format($transaction->discount_amount, 2) }}</td>
-                                <td class="p-4 text-sm text-gray-600 border-b border-gray-200">
+                                @if($transaction->is_confirmed == 0)
+                                <td class="p-4 text-sm border-b border-gray-200">
                                     <form action="{{ route('vendors.discount-transactions.confirm', $transaction->id) }}" method="POST" class="flex items-center space-x-2">
                                         @csrf
-                                        <input type="text" name="confirmation_code" value="{{ old('confirmation_code') }}" class="px-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 w-32" placeholder="{{__('Enter code')}}" required>
-                                        <button type="submit" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition duration-200 shadow-sm">
-                                            <i class="fas fa-check mr-1"></i> {{__('Confirm')}}
+                                        <div class="relative w-full max-w-xs">
+                                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                                <i class="fas fa-key text-gray-400"></i>
+                                            </div>
+                                            <input 
+                                                type="text" 
+                                                name="confirmation_code" 
+                                                value="{{ old('confirmation_code') }}" 
+                                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 placeholder-gray-400"
+                                                placeholder="{{__('Enter code')}}" 
+                                                required
+                                                autocomplete="off"
+                                            >
+                                        </div>
+                                        <button 
+                                            type="submit" 
+                                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg hover:from-purple-700 hover:to-purple-900 focus:ring-4 focus:ring-purple-300 focus:outline-none transition-all duration-300 shadow-lg transform hover:scale-105"
+                                        >
+                                            <i class="fas fa-check-circle mr-2"></i> {{__('Confirm')}}
                                         </button>
                                     </form>
+                                    
+                                    <p class="mt-2 text-xs text-gray-500">
+                                        <i class="fas fa-info-circle mr-1"></i> {{__('Enter the confirmation code provided by the customer')}}
+                                    </p>
                                 </td>
+                            @else
+                                <td class="p-4 text-sm border-b border-gray-200">
+                                    <div class="flex items-center">
+                                        <div class="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                                            <i class="fas fa-check text-green-600"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-green-600">{{__('ORDER COMPLETED')}}</p>
+                                            <p class="text-xs text-gray-500">{{ $transaction->updated_at->format('M d, Y h:i A') }}</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            @endif
                             </tr>
                         @empty
                             <tr>
